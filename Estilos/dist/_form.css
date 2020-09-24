@@ -1,0 +1,18 @@
+.Form {
+  padding: 5%;
+  background-color: white;
+  border-radius: 5%;
+  text-align: left;
+}
+.Form textarea {
+  vertical-align: middle;
+  margin: 5px;
+  resize: none;
+  align-self: right;
+  width: 100%;
+}
+.Form button {
+  margin: 10px;
+  width: 100%;
+  height: 15%;
+}
