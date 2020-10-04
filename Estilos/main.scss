@@ -1,13 +1,76 @@
-.firstbar {
+@import "./colores";
+header {
     display: flex;
     justify-content: space-between;
-    margin: 1em;
+    align-items: center;
+    height: 4vw;
+    background: $colorsecundario;
+    .logo {
+        height: 100%;
+        width: auto;
+    }
+    a {
+        color: $coloracento2;
+        text-decoration: none;
+        font-size: 2vw;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
 }
 
 footer {
-    height: 10vh;
+    height: 8vh;
     width: 100%;
-    background: rosybrown;
+    background: $colorterciario;
     position: absolute;
     bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        height: 100%;
+        width: auto;
+    }
+    a {
+        color: $coloracento2;
+        text-decoration: none;
+        font-size: 3vh;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+body {
+    background: $colorprincipal;
+    font-family: 'Bebas Neue', cursive;
+}
+
+form {
+    border-style: solid;
+    border-color: $coloracento;
+    border-width: 1em;
+    background: $colorsecundario;
+    width: 50vw;
+    height: 75vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    label {
+        font-size: 1.5vw;
+    }
+    input {
+        height: 3vh;
+        width: 50%;
+        margin-bottom: 1.5vh;
+    }
 }
