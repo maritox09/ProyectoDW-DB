@@ -48,6 +48,25 @@ footer {
 body {
     background: $colorprincipal;
     font-family: 'Bebas Neue', cursive;
+    .slider {
+        display: flex;
+        justify-content: center;
+        img {
+            margin-top: 3vh;
+            width: 50vw;
+        }
+    }
+    .resto {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        img {
+            margin-top: 2vh;
+            margin-left: 3vw;
+            margin-right: 3vw;
+            width: 25vw;
+        }
+    }
 }
 
 form {
@@ -72,5 +91,31 @@ form {
         height: 3vh;
         width: 50%;
         margin-bottom: 1.5vh;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        background: $colorprincipal;
+        font-family: 'Bebas Neue', cursive;
+        .slider {
+            display: flex;
+            justify-content: center;
+            img {
+                margin-top: 3vh;
+                width: 50vw;
+            }
+        }
+        .resto {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            img {
+                margin-top: 3vh;
+                width: 50vw;
+            }
+        }
     }
 }

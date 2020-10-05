@@ -48,6 +48,25 @@ body {
   background: #ef9c00;
   font-family: "Bebas Neue", cursive;
 }
+body .slider {
+  display: flex;
+  justify-content: center;
+}
+body .slider img {
+  margin-top: 3vh;
+  width: 50vw;
+}
+body .resto {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+body .resto img {
+  margin-top: 2vh;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  width: 25vw;
+}
 
 form {
   border-style: solid;
@@ -72,4 +91,30 @@ form input {
   height: 3vh;
   width: 50%;
   margin-bottom: 1.5vh;
+}
+
+@media (max-width: 700px) {
+  body {
+    background: #ef9c00;
+    font-family: "Bebas Neue", cursive;
+  }
+  body .slider {
+    display: flex;
+    justify-content: center;
+  }
+  body .slider img {
+    margin-top: 3vh;
+    width: 50vw;
+  }
+  body .resto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  body .resto img {
+    margin-top: 3vh;
+    width: 50vw;
+  }
 }
