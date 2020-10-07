@@ -1,5 +1,26 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
+
+<?php
+
+if(!empty($_GET['msg'])){
+    $error = $_GET['msg'];
+    if($error == "ok"){
+        $msg = "<h4>Se ha registrado tu usuario, Inicia secion...</h4>";
+    } elseif($error == "nous"){
+        $msg = "<h4>No existe ningun usuario con ese correo asignado...</h4>";
+    } elseif($error == "nocr"){
+        $msg = "<h4>Contraseña incorrecta...</h4>";
+    }
+}else{
+    $msg = '';
+}
+
+?>
 
 <head>
     <title>Login</title>
@@ -20,8 +41,9 @@
         <a href="./login.php">Login</a>
     </header>
     <div>
-        <form>
+        <form action="./auxis/logaux.php" method="post">
             <h1>Ingresa</h1>
+            <?php echo $msg ?>
             <label for="correo">Correo electronico</label>
             <input type="text" name="correo" placeholder="juanperez@gmail.com">
             <label for="contrasena">Contraseña</label>

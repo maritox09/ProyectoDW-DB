@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+if(!empty($_GET['msg'])){
+    $error = $_GET['msg'];
+    if($error == "no"){
+        $msg = "<h4>Algo salio mal...</h4>";
+    } elseif($error == "cr"){
+        $msg = "<h4>La contraseña no coincide...</h4>";
+    } elseif ($error == "tl"){
+        $msg = "<h4>El telefono ya esta registrado a otro usuario...</h4>";
+    } elseif ($error == "em"){
+        $msg = "<h4>El correo electronico ya esta registrado a otro usuario...</h4>";
+    }
+}else{
+    $msg = '';
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -22,6 +43,7 @@
     <div>
         <form action="./auxis/regaux.php" method="post">
             <h1>Registrate</h1>
+            <?php echo $msg; ?>
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" placeholder="Juan" required>
             <label for="apellido">Apellido</label>

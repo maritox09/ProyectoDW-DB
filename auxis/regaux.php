@@ -1,7 +1,5 @@
 <?php
 
-//error_reporting(0);
-
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $correo = $_POST['correo'];
@@ -27,21 +25,21 @@ function conectardb(){
 
 function comprobar_correo(){
     $correo = $_POST['correo'];
-    $sql = "SELECT * FROM usuarios WHERE correo = $correo";
-    $resultado = mysqli_query($GLOBALS['con'], $sql);
-
-    if(mysqli_num_rows($resultado) > 0){
-        return $resultado;
+    $sql = "SELECT * FROM usuarios WHERE correo = '$correo'";
+    if(mysqli_num_rows(mysqli_query($GLOBALS['con'], $sql)) > 0){
+        return true;
+    } else{
+        return false;
     }
 }
 
 function comprobar_telefono(){
     $telefono = $_POST['telefono'];
-    $sql = "SELECT * FROM usuarios WHERE correo = $telefono";
-    $resultado = mysqli_query($GLOBALS['con'], $sql);
-
-    if(mysqli_num_rows($resultado) > 0){
-        return $resultado;
+    $sql = "SELECT * FROM usuarios WHERE telefono = '$telefono'";
+    if(mysqli_num_rows(mysqli_query($GLOBALS['con'], $sql)) > 0){
+        return true;
+    } else{
+        return false;
     }
 }
 
@@ -52,32 +50,31 @@ function insertar(){
     $direccion = $_POST['direccion'];
     $telefono = $_POST['telefono'];
     $contrasena = $_POST['contrasena'];
-    $sql = "INSERT INTO usuarios(nombre, apellido, correo, direccion, telefono, password,) VALUES('$nombre', '$apellido', '$correo', '$direccion', $telefono, '$contrasena')";
-    if(mysqli_query($GLOBALS['con'], $sql) == TRUE){
-        return TRUE;
+    $sql1 = "INSERT INTO usuarios(nombre, apellido, correo, direccion, telefono, password) VALUES('$nombre', '$apellido', '$correo', '$direccion', $telefono, '$contrasena')";
+    $sql2 = "INSERT INTO roles VALUES(LAST_INSERT_ID(), 'visitante')";
+    if(mysqli_query($GLOBALS['con'], $sql1) && mysqli_query($GLOBALS['con'],$sql2)){
+        return true;
     } else{
         return FALSE;
     }
 }
 
+$con = conectardb();
+
 if(!comprobar_correo()){
     if(!comprobar_telefono()){
         if($contrasena == $contrasena2){
             if(insertar()){
-                header("Location: registrocompleto.php");
+                header("Location: /proyectodbdw/login.php?msg=ok");
             }else{
-                echo "algo salio mal en el insertar";
+                header("Location: /proyectodbdw/registro.php?msg=no");
             }
         }else{
-            echo "algo salio mal en la contrasena";
+            header("Location: /proyectodbdw/registro.php?msg=cr");
         }
     }else{
-        $stm = "<h1>Este telefono ya ha sido registrado para otro usuario</h1>";
-        echo $stm;
+        header("Location: /proyectodbdw/registro.php?msg=tl");;
     }
 }else{
-    $stm = "<h1>Este correo ya ha sido registrado para otro usuario</h1>";
-    echo $stm;
-    sleep(5);
-    
+    header("Location: /proyectodbdw/registro.php?msg=em");;
 }
