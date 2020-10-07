@@ -10,14 +10,14 @@
 <body>
     <header>
         <img src="./Assets/logo.jpg" class="logo">
-        <a href="./main.html">Inicio</a>
+        <a href="./main.php">Inicio</a>
         <a href="">Desayunos</a>
         <a href="">Almuerzos</a>
         <a href="">Cenas</a>
         <a href="">Promocionales</a>
         <a href="">Historia</a>
-        <a href="./registro.html">Registro</a>
-        <a href="./login.html">Login</a>
+        <a href="./registro.php">Registro</a>
+        <a href="./login.php">Login</a>
     </header>
     <div>
         <form>
