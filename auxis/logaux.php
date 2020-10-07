@@ -37,6 +37,16 @@ function comprobar(){
         header("Location: /proyectodbdw/login.php?msg=nous");
     }
 }
+
+function rol($id){
+    $sql = "SELECT * FROM roles WHERE id_usuario = $id";
+    $resultado = mysqli_query($GLOBALS['con'], $sql);
+    $row = mysqli_fetch_assoc($resultado);
+    return ($row['rol']);
+}
+
 $comp = comprobar();
+$rol = rol($comp);
 $_SESSION["id"] = $comp;
+$_SESSION["rol"] = $rol;
 header("Location: /proyectodbdw/main.php");

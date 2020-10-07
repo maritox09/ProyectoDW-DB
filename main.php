@@ -3,8 +3,10 @@ session_start();
 
 if(!empty($_SESSION['id'])){
     $ses = $_SESSION['id'];
+    $rol = $_SESSION['rol'];
 }else{
     $ses = -1;
+    $rol = 'anonimo';
 }
 
 function conectardb(){
@@ -24,20 +26,19 @@ function conectardb(){
 
 $con = conectardb();
 
-$sql = "SELECT * FROM roles WHERE id_usuario = '$ses'";
-if(mysqli_num_rows(mysqli_query($GLOBALS['con'], $sql)) > 0){
-    //return true;
-} else{
-    //return false;
-}
-
 if(!empty($_SESSION['id'])){
-    $reg_carr = "<a href='./carrito.php'>Carrito</a>";
-    $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
-} else{
+    if($rol == 'visitante'){
+        $reg_carr = "<a href='./carrito.php'>Carrito</a>";
+        $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
+    } elseif($rol == 'empleado'  or $rol == 'admin'){
+        $reg_carr = "<a href='./administrar.php'>Administrar</a>";
+        $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
+    }
+}else{
     $reg_carr = "<a href='./registro.php'>Registro</a>";
     $log_out =  "<a href='./login.php'>Login</a>";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +62,8 @@ if(!empty($_SESSION['id'])){
         <?php echo $reg_carr; ?>
         <?php echo $log_out; ?>
     </header>
+    <?php echo $rol?>
+    <?php echo $ses?>
     <div class="slider">
         <a href=""><img src="./Assets/destacados.jpg"></a>
     </div>
