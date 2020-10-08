@@ -68,7 +68,7 @@ body .resto img {
   width: 25vw;
 }
 
-form {
+.user {
   border-style: solid;
   border-color: #8fd296;
   border-width: 1em;
@@ -84,13 +84,56 @@ form {
   justify-content: center;
   align-items: center;
 }
-form label {
+.user label {
   font-size: 1.5vw;
 }
-form input {
+.user input {
   height: 3vh;
   width: 50%;
   margin-bottom: 1.5vh;
+}
+
+.editar {
+  font-size: 2vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5vw;
+}
+.editar input {
+  padding: 0.25vw;
+  width: 10vw;
+  margin: 0.2vw;
+}
+.editar h3 {
+  margin: 0px;
+}
+
+.ingredientes {
+  font-size: 2vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5vw;
+}
+.ingredientes input {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 10vw;
+}
+
+.platillos {
+  font-size: 2vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0.5vw;
+}
+.platillos input {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 10vw;
 }
 
 nav {
@@ -110,13 +153,20 @@ nav a {
 
 table {
   margin: 1vw;
-  font-size: 2vw;
   align-items: center;
   table-layout: fixed;
   width: 98%;
 }
-table th,
-table td {
+table thead th,
+table thead td {
+  font-size: 2vw;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-left: 1vw;
+}
+table tbody th,
+table tbody td {
+  font-size: 1vw;
   border: 1px solid black;
   border-collapse: collapse;
   padding-left: 1vw;

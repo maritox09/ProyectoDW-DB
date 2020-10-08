@@ -69,8 +69,16 @@ function read(){
     <header>
         <img src="/proyectodbdw/Assets/logo.jpg" class="logo">
         <a href="/proyectodbdw/main.php">Inicio</a>
+        <a href="/proyectodbdw/administrar.php">Regresar</a>
         <a href="/proyectodbdw/auxis/logout.php">Logout</a>
     </header>
+    <div>
+        <form method="post" action="/proyectodbdw/admin/auxis/insertaringrediente.php" class="ingredientes">
+            Ingrediente: <input type="text" name="nombre" required>
+            Cantidad: <input type="text" name="cantidad" required>
+            <input type="submit" value="Ingresar">
+        </form>
+    </div>
     <div>
         <table>
             <thead>
@@ -78,6 +86,7 @@ function read(){
                     <td>Ingrediente</td>
                     <td>Cantidad</td>
                     <td>Editar</td>
+                    <td>Borrar</td>
                 </tr>
             </thead>
             <tbody>
@@ -88,7 +97,8 @@ function read(){
                             <tr>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['nombre'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['cantidad'];?></td>
-                                <td><a href="/protectodbdw/admin/edit.php?id=<?php echo $row['id']?>">Editar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/editaringrediente.php?id=<?php echo $row['id']?>">click para editar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/borraringrediente.php?id=<?php echo $row['id']?>">click para borrar</a></td>
                             </tr>
                             <?php
                             }

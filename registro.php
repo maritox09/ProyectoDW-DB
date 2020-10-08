@@ -41,7 +41,7 @@ if(!empty($_GET['msg'])){
         <a href="./login.php">Login</a>
     </header>
     <div>
-        <form action="./auxis/regaux.php" method="post">
+        <form action="./auxis/regaux.php" method="post" class="user">
             <h1>Registrate</h1>
             <?php echo $msg; ?>
             <label for="nombre">Nombre</label>

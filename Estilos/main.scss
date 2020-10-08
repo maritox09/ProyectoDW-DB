@@ -69,7 +69,7 @@ body {
     }
 }
 
-form {
+.user {
     border-style: solid;
     border-color: $coloracento;
     border-width: 1em;
@@ -94,6 +94,49 @@ form {
     }
 }
 
+.editar {
+    font-size: 2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5vw;
+    input {
+        padding: 0.25vw;
+        width: 10vw;
+        margin: 0.2vw;
+    }
+    h3 {
+        margin: 0px;
+    }
+}
+
+.ingredientes {
+    font-size: 2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5vw;
+    input {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        width: 10vw;
+    }
+}
+
+.platillos {
+    font-size: 2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0.5vw;
+    input {
+        margin-left: 1vw;
+        margin-right: 1vw;
+        width: 10vw;
+    }
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -111,15 +154,26 @@ nav {
 
 table {
     margin: 1vw;
-    font-size: 2vw;
     align-items: center;
     table-layout: fixed;
     width: 98%;
-    th,
-    td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding-left: 1vw;
+    thead {
+        th,
+        td {
+            font-size: 2vw;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding-left: 1vw;
+        }
+    }
+    tbody {
+        th,
+        td {
+            font-size: 1vw;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding-left: 1vw;
+        }
     }
 }
 

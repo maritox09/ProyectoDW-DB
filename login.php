@@ -41,7 +41,7 @@ if(!empty($_GET['msg'])){
         <a href="./login.php">Login</a>
     </header>
     <div>
-        <form action="./auxis/logaux.php" method="post">
+        <form action="./auxis/logaux.php" method="post" class="user">
             <h1>Ingresa</h1>
             <?php echo $msg ?>
             <label for="correo">Correo electronico</label>
