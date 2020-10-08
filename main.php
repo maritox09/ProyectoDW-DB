@@ -30,13 +30,16 @@ if(!empty($_SESSION['id'])){
     if($rol == 'visitante'){
         $reg_carr = "<a href='./carrito.php'>Carrito</a>";
         $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
+        $perf = "<a href='./perfil.php'>Perfil</a>";
     } elseif($rol == 'empleado'  or $rol == 'admin'){
         $reg_carr = "<a href='./administrar.php'>Administrar</a>";
         $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
+        $perf = "<a href='./perfil.php'>Perfil</a>";
     }
 }else{
     $reg_carr = "<a href='./registro.php'>Registro</a>";
     $log_out =  "<a href='./login.php'>Login</a>";
+    $perf = "";
 }
 
 ?>
@@ -59,6 +62,7 @@ if(!empty($_SESSION['id'])){
         <a href="">Cenas</a>
         <a href="">Promocionales</a>
         <a href="">Historia</a>
+        <?php echo $perf; ?>
         <?php echo $reg_carr; ?>
         <?php echo $log_out; ?>
     </header>

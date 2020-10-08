@@ -47,7 +47,7 @@ footer {
 
 body {
     background: $colorprincipal;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue', cursive !important;
     .slider {
         display: flex;
         justify-content: center;
@@ -91,6 +91,35 @@ form {
         height: 3vh;
         width: 50%;
         margin-bottom: 1.5vh;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 5vw;
+    }
+    a {
+        font-size: 5vw;
+        text-decoration: none;
+        color: $coloracento2;
+    }
+}
+
+table {
+    margin: 1vw;
+    font-size: 2vw;
+    align-items: center;
+    table-layout: fixed;
+    width: 98%;
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding-left: 1vw;
     }
 }
 

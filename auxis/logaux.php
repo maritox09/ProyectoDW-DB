@@ -49,4 +49,7 @@ $comp = comprobar();
 $rol = rol($comp);
 $_SESSION["id"] = $comp;
 $_SESSION["rol"] = $rol;
-header("Location: /proyectodbdw/main.php");
+
+if(!empty($_SESSION['id'])){
+    header("Location: /proyectodbdw/main.php");
+}
