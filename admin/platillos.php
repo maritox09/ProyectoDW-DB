@@ -73,7 +73,7 @@ function read(){
         <a href="/proyectodbdw/auxis/logout.php">Logout</a>
     </header>
     <div>
-        <form method="post" action="/proyectodbdw/admin/auxis/insertaringrediente.php" class="platillos">
+        <form method="post" action="/proyectodbdw/admin/auxis/insertarplatillo.php" class="platillos">
             Platillo: <input type="text" name="nombre" required>
             Descripcion: <input type="text" name="descripcion" required>
             Precio: <input type="number" name="descripcion" required>
@@ -108,8 +108,8 @@ function read(){
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['fotografia'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['destacado'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['disponible'];?></td>
-                                <td><a href="/proyectodbdw/admin/auxis/editaringrediente.php?id=<?php echo $row['id']?>">click</a></td>
-                                <td><a href="/proyectodbdw/admin/auxis/borraringrediente.php?id=<?php echo $row['id']?>">click</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/editarplatillos.php?id=<?php echo $row['id']?>">click</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/borrarplatillos.php?id=<?php echo $row['id']?>">click</a></td>
                             </tr>
                             <?php
                             }
