@@ -76,9 +76,9 @@ function read(){
         <form method="post" action="/proyectodbdw/admin/auxis/insertarplatillo.php" class="platillos">
             Platillo: <input type="text" name="nombre" required>
             Descripcion: <input type="text" name="descripcion" required>
-            Precio: <input type="number" name="descripcion" required>
-            Destacado: <input type="checkbox" name="descripcion">
-            Disponible: <input type="checkbox" name="descripcion" checked>
+            Precio: <input type="number" name="precio" required>
+            Destacado: <input type="checkbox" name="destacado">
+            Disponible: <input type="checkbox" name="disponible" checked>
             <input type="submit" value="Ingresar">
         </form>
     </div>

@@ -53,6 +53,9 @@ body .slider {
   justify-content: center;
 }
 body .slider img {
+  border-style: solid;
+  border-width: 10px;
+  border-color: #8fd296;
   margin-top: 3vh;
   width: 50vw;
 }
@@ -66,6 +69,9 @@ body .resto img {
   margin-left: 3vw;
   margin-right: 3vw;
   width: 25vw;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #8fd296;
 }
 
 .user {

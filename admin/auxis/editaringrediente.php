@@ -34,9 +34,10 @@ $row = mysqli_fetch_assoc($resultado);
     <title>Editar <?php echo $row['nombre']; ?></title>
 </head>
 <body>
-    <header>
+<header>
         <img src="/proyectodbdw/Assets/logo.jpg" class="logo">
         <a href="/proyectodbdw/main.php">Inicio</a>
+        <a href="/proyectodbdw/admin/ingredientes.php">Regresar</a>
         <a href="/proyectodbdw/auxis/logout.php">Logout</a>
     </header>
     <div class="editar">
