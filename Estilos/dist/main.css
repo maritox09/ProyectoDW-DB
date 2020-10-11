@@ -162,11 +162,11 @@ body .resto img {
   width: 10vw;
 }
 
-.wrapper {
+.wrapper-menus {
   margin-bottom: 4vw;
   width: 100%;
 }
-.wrapper .col {
+.wrapper-menus .col {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -177,17 +177,51 @@ body .resto img {
   border-color: #8fd296;
   border-width: 0.5vw;
 }
-.wrapper .col img {
+.wrapper-menus .col img {
   width: 20vw;
 }
-.wrapper .col .agregar {
+.wrapper-menus .col .agregar {
   float: right;
   width: 3vw;
 }
-.wrapper .row {
+.wrapper-menus .row {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.wrapper-platillos {
+  width: 95%;
+  height: 70vh;
+  background-color: #ffffff;
+  margin: 1vw;
+  padding: 1vw;
+  padding-bottom: 3vw;
+  border-style: solid;
+  border-color: #8fd296;
+  border-width: 0.5vw;
+}
+.wrapper-platillos .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.wrapper-platillos .col img {
+  width: 50vw;
+}
+.wrapper-platillos .col .agregar {
+  margin-top: 2vh;
+  height: 10vw;
+  width: auto;
+}
+.wrapper-platillos .row {
+  font-size: 1vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.wrapper-platillos h1 {
+  font-size: 2vw;
 }
 
 nav {

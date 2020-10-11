@@ -49,7 +49,7 @@ if(!empty($_SESSION['id'])){
 
 <head>
     <title>Mr. Taco</title>
-    <link rel="stylesheet" href="./Estilos/dist/main.css">
+    <link rel="stylesheet" href="/proyectodbdw/Estilos/dist/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 
@@ -66,10 +66,10 @@ if(!empty($_SESSION['id'])){
         <?php echo $reg_carr; ?>
         <?php echo $log_out; ?>
     </header>
-    <div class="wrapper">
+    <div class="wrapper-menus">
     <div class="row">
         <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
+            <a href="/proyectodbdw/auxis/detalleplatillo.php"><img src="/proyectodbdw/Assets/desayunos.jpg"></a>
             <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
             <p>deliciosos taquitos de cerdo</p>
             
