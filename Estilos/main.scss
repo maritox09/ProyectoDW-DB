@@ -117,6 +117,26 @@ body {
     }
 }
 
+.platillo {
+    font-size: 2vw;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    form {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    input {
+        padding: 0.25vw;
+        width: 10vw;
+        margin: 0.2vw;
+    }
+    h3 {
+        margin: 0px;
+    }
+}
+
 .ingredientes {
     font-size: 2vw;
     justify-content: center;

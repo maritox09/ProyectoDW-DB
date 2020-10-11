@@ -116,6 +116,26 @@ body .resto img {
   margin: 0px;
 }
 
+.platillo {
+  font-size: 2vw;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.platillo form {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+.platillo input {
+  padding: 0.25vw;
+  width: 10vw;
+  margin: 0.2vw;
+}
+.platillo h3 {
+  margin: 0px;
+}
+
 .ingredientes {
   font-size: 2vw;
   justify-content: center;
