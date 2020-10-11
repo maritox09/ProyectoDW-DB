@@ -57,7 +57,7 @@ if(!empty($_SESSION['id'])){
     <header>
         <img src="./Assets/logo.jpg" class="logo">
         <a href="./main.php">Inicio</a>
-        <a href="">Desayunos</a>
+        <a href="./desayunos.php">Desayunos</a>
         <a href="">Almuerzos</a>
         <a href="">Cenas</a>
         <a href="">Promocionales</a>
@@ -72,7 +72,7 @@ if(!empty($_SESSION['id'])){
         <a href=""><img src="./Assets/destacados.jpg"></a>
     </div>
     <div class="resto">
-        <a href=""><img src="./Assets/desayunos.jpg"></a>
+        <a href="./desayunos.php"><img src="./Assets/desayunos.jpg"></a>
         <a href=""><img src="./Assets/almuerzos.jpg"></a>
         <a href=""><img src="./Assets/cenas.jpg"></a>
     </div>

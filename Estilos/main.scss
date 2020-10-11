@@ -13,8 +13,8 @@ header {
         color: $coloracento2;
         text-decoration: none;
         font-size: 2vw;
-        margin-right: 1em;
-        margin-left: 1em;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
     }
 }
 
@@ -22,7 +22,7 @@ footer {
     height: 8vh;
     width: 100%;
     background: $colorterciario;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     left: 0px;
     display: flex;
@@ -163,6 +163,34 @@ body {
     }
 }
 
+.wrapper {
+    margin-bottom: 4vw;
+    width: 100%;
+    .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: $colorsecundario;
+        margin: 1vw;
+        padding: 1vw;
+        border-style: solid;
+        border-color: $coloracento;
+        border-width: 0.5vw;
+        img {
+            width: 20vw;
+        }
+        .agregar {
+            float: right;
+            width: 3vw;
+        }
+    }
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -225,6 +253,27 @@ table {
                 margin-top: 3vh;
                 width: 50vw;
             }
+        }
+    }
+    .wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: $colorsecundario;
+            margin: 1vw;
+            padding: 1vw;
+            border-style: solid;
+            border-color: $coloracento;
+            border-width: 1vw;
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     }
 }
