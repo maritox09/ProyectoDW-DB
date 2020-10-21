@@ -74,6 +74,26 @@ function permisoempleado(){
     }
 }
 
+function permisoadmin(){
+    if($GLOBALS['ses'] != -1){
+        if($GLOBALS['rol'] == 'admin'){
+            return;
+        }
+    }else{
+        die("<body><h1>No tiene los permisos necesarios para estar aqui... </h1><a href='/proyectodbdw/main.php'>Regresar</a></body>");
+    }
+}
+
+function permisousuario(){
+    if($GLOBALS['ses'] != -1){
+        if($GLOBALS['rol'] == 'empleado'  or $GLOBALS['rol'] == 'admin' or $GLOBALS['rol'] == 'usuario'){
+            return;
+        }
+    }else{
+        die("<body><h1>No tiene los permisos necesarios para estar aqui... </h1><a href='/proyectodbdw/main.php'>Regresar</a></body>");
+    }
+}
+
 function navadministrar(){
     if($GLOBALS['rol'] == 'empleado'){
         echo "<a href='./admin/ingredientes.php'>Ingredientes</a><a href='./admin/platillos.php'>Platillos</a><a href='./admin/menus.php'>Menus</a>";

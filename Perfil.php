@@ -34,6 +34,10 @@ $row = mysqli_fetch_assoc($resultado);
             No. de Tarjeta: <input type="text" name="tarjeta" value="<?php echo $row['notarjeta'] ?>">
             Fecha de vencimiento:<input type="month" name="vencimiento" value="<?php echo $row['vencimiento'] ?>">
             <input type="submit" value="Actualizar Datos">
+            <button form="contra">Cambiar contraseña</button>
+        </form>
+        <form id="contra" action="/Proyectodbdw/auxis/cambiarpassword.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $row['id_usuario'] ?>">
         </form>
     </div>
     <footer>
