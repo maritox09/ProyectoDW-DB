@@ -1,35 +1,28 @@
 <?php
-session_start();
-if(!empty($_SESSION['id'])){
-    $ses = $_SESSION['id'];
-    $rol = $_SESSION['rol'];
-}else{
-    $ses = -1;
-    $rol = 'anonimo';
-}
+require_once './auxis/componentes.php';
 
 if(!empty($_SESSION['id'])){
     if($rol == 'visitante'){
-        $a = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
-        $b =  "<a href='./main.php'>Regresar</a>";
-        $c =  "";
-        $d =  "";
+        $linea1 = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
+        $linea2 =  "<a href='./main.php'>Regresar</a>";
+        $linea3 =  "";
+        $linea4 =  "";
     } elseif($rol == 'empleado'){
-        $a = "<a href='./admin/ingredientes.php'>Ingredientes</a>";
-        $b =  "<a href='./admin/platillos.php'>Platillos</a>";
-        $c =  "<a href='./admin/menus.php'>Menus</a>";
-        $d =  "";
+        $linea1 = "<a href='./admin/ingredientes.php'>Ingredientes</a>";
+        $linea2 =  "<a href='./admin/platillos.php'>Platillos</a>";
+        $linea3 =  "<a href='./admin/menus.php'>Menus</a>";
+        $linea4 =  "";
     }elseif($rol == 'admin'){
-        $a = "<a href='./admin/ingredientes.php'>Ingredientes</a>";
-        $b =  "<a href='./admin/platillos.php'>Platillos</a>";
-        $c =  "<a href='./admin/menus.php'>Menus</a>";
-        $d =  "<a href='./admin/usuarios.php'>Usuarios</a>";
+        $linea1 = "<a href='./admin/ingredientes.php'>Ingredientes</a>";
+        $linea2 =  "<a href='./admin/platillos.php'>Platillos</a>";
+        $linea3 =  "<a href='./admin/menus.php'>Menus</a>";
+        $linea4 =  "<a href='./admin/usuarios.php'>Usuarios</a>";
     }
 }else{
-    $a = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
-    $b =  "<a href='./main.php'>Regresar</a>";
-    $c =  "";
-    $d =  "";
+    $linea1 = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
+    $linea2 =  "<a href='./main.php'>Regresar</a>";
+    $linea3 =  "";
+    $linea4 =  "";
 }
 ?>
 
@@ -44,22 +37,18 @@ if(!empty($_SESSION['id'])){
 </head>
 <body>
     <header>
-        <img src="./Assets/logo.jpg" class="logo">
-        <a href="./main.php">Inicio</a>
-        <a href="./auxis/logout.php">Logout</a>
+        <?php menuadmin(); ?>
     </header>
     <div>
         <nav>
-            <?php echo $a; ?>
-            <?php echo $b; ?>
-            <?php echo $c; ?>
-            <?php echo $d; ?>
+            <?php permisoempleado();
+            navadministrar();
+            ?>
+
         </nav>
     </div>
     <footer>
-        <a href="">Contactanos</a>
-        <img src="./Assets/logotenue.png">
-        <a href="">Sucursales</a>
+        <?php footer(); ?>
     </footer>
 </body>
 </html>

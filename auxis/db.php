@@ -1,7 +1,5 @@
 <?php
 
-include_once("./auxis/db.php");
-
 function conectardb(){
     $servername = "localhost";
     $username = "root";
@@ -16,3 +14,4 @@ function conectardb(){
         return $con;
     }
 }
+?>

@@ -1,20 +1,6 @@
 <?php
-
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
-
+require_once '/xampp/htdocs/Proyectodbdw/auxis/db.php';
+require_once '/xampp/htdocs/Proyectodbdw/auxis/componentes.php';
 $con = conectardb();
 
 $id = $_GET['id'];
@@ -87,12 +73,10 @@ if(!empty($ing5['id_ing'])){
     <title>Editar <?php echo $row['nombre']; ?></title>
 </head>
 <body>
-<header>
-        <img src="/proyectodbdw/Assets/logo.jpg" class="logo">
-        <a href="/proyectodbdw/main.php">Inicio</a>
-        <a href="/proyectodbdw/admin/platillos.php">Regresar</a>
-        <a href="/proyectodbdw/auxis/logout.php">Logout</a>
+    <header>
+        <?php menuindividual(); ?>
     </header>
+    <?php permisoempleado(); ?>
     <div class="platillo"> 
         <form action="/proyectodbdw/admin/auxis/editplat.php"  class="editar" method="post">
             <h3>Datos del platillo</h3>
@@ -141,9 +125,7 @@ if(!empty($ing5['id_ing'])){
         </form>
     </div>
     <footer>
-        <a href="">Contactanos</a>
-        <img src="/proyectodbdw/Assets/logotenue.png">
-        <a href="">Sucursales</a>
+        <?php footer(); ?>
     </footer>
 </body>
 </html>

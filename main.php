@@ -1,47 +1,7 @@
 <?php 
-session_start();
-
-if(!empty($_SESSION['id'])){
-    $ses = $_SESSION['id'];
-    $rol = $_SESSION['rol'];
-}else{
-    $ses = -1;
-    $rol = 'anonimo';
-}
-
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
-
+require_once './auxis/db.php';
+require_once './auxis/componentes.php';
 $con = conectardb();
-
-if(!empty($_SESSION['id'])){
-    if($rol == 'visitante'){
-        $reg_carr = "<a href='./carrito.php'>Carrito</a>";
-        $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
-        $perf = "<a href='./perfil.php'>Perfil</a>";
-    } elseif($rol == 'empleado'  or $rol == 'admin'){
-        $reg_carr = "<a href='./administrar.php'>Administrar</a>";
-        $log_out =  "<a href='./auxis/logout.php'>Logout</a>";
-        $perf = "<a href='./perfil.php'>Perfil</a>";
-    }
-}else{
-    $reg_carr = "<a href='./registro.php'>Registro</a>";
-    $log_out =  "<a href='./login.php'>Login</a>";
-    $perf = "";
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -55,19 +15,9 @@ if(!empty($_SESSION['id'])){
 
 <body>
     <header>
-        <img src="./Assets/logo.jpg" class="logo">
-        <a href="./main.php">Inicio</a>
-        <a href="./desayunos.php">Desayunos</a>
-        <a href="">Almuerzos</a>
-        <a href="">Cenas</a>
-        <a href="">Promocionales</a>
-        <a href="">Historia</a>
-        <?php echo $perf; ?>
-        <?php echo $reg_carr; ?>
-        <?php echo $log_out; ?>
+        <?php menuprincipal(); ?>
     </header>
-    <?php echo $rol?>
-    <?php echo $ses?>
+    <?php echo $ses; ?>
     <div class="slider">
         <a href=""><img src="./Assets/destacados.jpg"></a>
     </div>
@@ -77,9 +27,7 @@ if(!empty($_SESSION['id'])){
         <a href=""><img src="./Assets/cenas.jpg"></a>
     </div>
     <footer>
-        <a href="">Contactanos</a>
-        <img src="./Assets/logotenue.png">
-        <a href="">Sucursales</a>
+    <?php footer(); ?>
     </footer>
 </body>
 

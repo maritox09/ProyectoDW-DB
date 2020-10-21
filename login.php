@@ -1,12 +1,11 @@
 <?php 
-session_start();
+require_once './auxis/componentes.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 
 <?php
-
 if(!empty($_GET['msg'])){
     $error = $_GET['msg'];
     if($error == "ok"){
@@ -19,7 +18,6 @@ if(!empty($_GET['msg'])){
 }else{
     $msg = '';
 }
-
 ?>
 
 <head>
@@ -30,15 +28,7 @@ if(!empty($_GET['msg'])){
 
 <body>
     <header>
-        <img src="./Assets/logo.jpg" class="logo">
-        <a href="./main.php">Inicio</a>
-        <a href="">Desayunos</a>
-        <a href="">Almuerzos</a>
-        <a href="">Cenas</a>
-        <a href="">Promocionales</a>
-        <a href="">Historia</a>
-        <a href="./registro.php">Registro</a>
-        <a href="./login.php">Login</a>
+        <?php menuprincipal(); ?>
     </header>
     <div>
         <form action="./auxis/logaux.php" method="post" class="user">
@@ -52,9 +42,7 @@ if(!empty($_GET['msg'])){
         </form>
     </div>
     <footer>
-        <a href="">Contactanos</a>
-        <img src="./Assets/logotenue.png">
-        <a href="">Sucursales</a>
+        <?php footer(); ?>
     </footer>
 </body>
 

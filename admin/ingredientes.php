@@ -1,50 +1,6 @@
 <?php
-session_start();
-if(!empty($_SESSION['id'])){
-    $ses = $_SESSION['id'];
-    $rol = $_SESSION['rol'];
-}else{
-    $ses = -1;
-    $rol = 'anonimo';
-}
-
-if(!empty($_SESSION['id'])){
-    if($rol == 'visitante'){
-        $a = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
-        $b =  "<a href='./main.php'>Regresar</a>";
-        $c =  "";
-        $d =  "";
-    } elseif($rol == 'empleado'){
-        $a = "";
-        $b = "";
-        $c = "";
-        $d = "";
-    }elseif($rol == 'admin'){
-        $a = "";
-        $b = "";
-        $c = "";
-        $d = "";
-    }
-}else{
-    $a = "<h1>No tiene los permisos necesarios para estar aqui...</h1>";
-    $b =  "<a href='./main.php'>Regresar</a>";
-    $c =  "";
-    $d =  "";
-}
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
+require_once '../auxis/componentes.php';
+require_once '../auxis/db.php';
 $con = conectardb();
 
 function read(){
@@ -67,11 +23,9 @@ function read(){
 </head>
 <body>
     <header>
-        <img src="/proyectodbdw/Assets/logo.jpg" class="logo">
-        <a href="/proyectodbdw/main.php">Inicio</a>
-        <a href="/proyectodbdw/administrar.php">Regresar</a>
-        <a href="/proyectodbdw/auxis/logout.php">Logout</a>
+        <?php menuindividual(); ?>
     </header>
+    <?php permisoempleado(); ?>
     <div>
         <form method="post" action="/proyectodbdw/admin/auxis/insertaringrediente.php" class="ingredientes">
             Ingrediente: <input type="text" name="nombre" required>
@@ -92,6 +46,7 @@ function read(){
             <tbody>
                 <?php
                     $resultado = read();
+                    $row = mysqli_fetch_assoc($resultado);
                     if($resultado){
                         while($row = mysqli_fetch_assoc($resultado)){?>
                             <tr>
@@ -108,9 +63,7 @@ function read(){
         </table>
     </div>
     <footer>
-        <a href="">Contactanos</a>
-        <img src="/proyectodbdw/Assets/logotenue.png">
-        <a href="">Sucursales</a>
+        <?php footer(); ?>
     </footer>
 </body>
 </html>

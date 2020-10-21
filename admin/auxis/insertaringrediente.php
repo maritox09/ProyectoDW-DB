@@ -1,20 +1,5 @@
 <?php
-
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
-
+require_once '/xampp/htdocs/Proyectodbdw/auxis/db.php';
 $con = conectardb();
 
 $nombre = $_POST['nombre'];
@@ -26,3 +11,4 @@ if(mysqli_query($con, $sql)){
 } else {
     die("Algo salio mal <a href='/proyectodbdw/admin/ingredientes.php'>Regresar</a>");
 }
+?>
