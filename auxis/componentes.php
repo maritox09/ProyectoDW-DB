@@ -44,7 +44,7 @@ function menuprincipal(){
 
 function menuadmin(){
     $menu = "<img src='/proyectodbdw/Assets/logo.jpg' class='logo'>
-    <a href='./main.php'>Inicio</a>
+    <a href='/proyectodbdw/main.php'>Inicio</a>
     <a href='/proyectodbdw/auxis/logout.php'>Logout</a>";
     echo $menu;
 }
@@ -96,9 +96,9 @@ function permisousuario(){
 
 function navadministrar(){
     if($GLOBALS['rol'] == 'empleado'){
-        echo "<a href='./admin/ingredientes.php'>Ingredientes</a><a href='./admin/platillos.php'>Platillos</a><a href='./admin/menus.php'>Menus</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a><a href='/proyectodbdw/admin/platillos.php'>Platillos</a><a href='/proyectodbdw/admin/menus.php'>Menus</a>";
     }elseif($GLOBALS['rol'] == 'admin'){
-        echo "<a href='./admin/ingredientes.php'>Ingredientes</a><a href='./admin/platillos.php'>Platillos</a><a href='./admin/menus.php'>Menus</a><a href='./admin/usuarios.php'>Usuarios</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a><a href='/proyectodbdw/admin/platillos.php'>Platillos</a><a href='/proyectodbdw/admin/menus.php'>Menus</a><a href='/proyectodbdw/admin/usuarios.php'>Usuarios</a>";
     }
 }
 ?>
