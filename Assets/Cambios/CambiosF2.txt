@@ -1,0 +1,5 @@
+Jalar HTMLS puros para entrega de DW
+Arreglar Main con carusel y slider
+cerrar todos los php
+Ingredientes dinamicos en platillos
+Arreglar include php

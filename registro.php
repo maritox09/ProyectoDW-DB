@@ -1,8 +1,6 @@
 <?php
 require_once './auxis/componentes.php';
 
-session_start();
-
 if(!empty($_GET['msg'])){
     $error = $_GET['msg'];
     if($error == "no"){

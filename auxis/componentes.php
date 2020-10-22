@@ -17,9 +17,9 @@ function menuprincipal(){
     $login = "<a href='/proyectodbdw/login.php'>LogIn</a>";
     $menu = "<img src='/proyectodbdw/Assets/logo.jpg' class='logo'>
         <a href='./main.php'>Inicio</a>
-        <a href='/proyectodbdw/desayunos.php'>Desayunos</a>
-        <a href=''>Almuerzos</a>
-        <a href=''>Cenas</a>
+        <a href='/proyectodbdw/menus.php?menu=desayuno'>Desayunos</a>
+        <a href='/proyectodbdw/menus.php?menu=almuerzo'>Almuerzos</a>
+        <a href='/proyectodbdw/menus.php?menu=cena'>Cenas</a>
         <a href=''>Promocionales</a>
         <a href=''>Historia</a>";
 
@@ -58,9 +58,11 @@ function menuindividual(){
 }
 
 function footer(){
-    $footer = "<a href=''>Contactanos</a>
+    $footer = "<a href='/proyectodbdw/contacto.php'>Contactanos</a>
+        <a href='/proyectodbdw/FAQ.php'>FAQ</a>
         <img src='/proyectodbdw/Assets/logotenue.png'>
-        <a href=''>Sucursales</a>";
+        <a href=''>Sucursales</a>
+        <a href=''>Revisa tu pedido</a>";
     echo $footer;
 }
 

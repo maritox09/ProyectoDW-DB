@@ -168,6 +168,7 @@ body .resto img {
   width: 100%;
 }
 .wrapper-menus .col {
+  min-width: 33vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

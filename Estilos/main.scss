@@ -168,6 +168,7 @@ body {
     margin-bottom: 4vw;
     width: 100%;
     .col {
+        min-width: 33vw;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;

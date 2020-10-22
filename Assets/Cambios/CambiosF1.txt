@@ -1,0 +1,9 @@
+Separar tablas menus
+Normalizar
+Revisar tabla de pedidos
+Cardinalidad erronea
+CRUD agregar inventario
+Pagina individual para ing, plat, etc
+Mejorar la vista
+terminar template e implementar
+Wireframes tambien para mobile
