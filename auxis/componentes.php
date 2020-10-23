@@ -51,7 +51,7 @@ function menuadmin(){
 
 function menuindividual(){
     $menu = "<img src='/proyectodbdw/Assets/logo.jpg' class='logo'>
-    <a href='./main.php'>Inicio</a>
+    <a href='/proyectodbdw/main.php'>Inicio</a>
     <a href='/proyectodbdw/administrar.php'>Regresar</a>
     <a href='/proyectodbdw/auxis/logout.php'>Logout</a>";
     echo $menu;

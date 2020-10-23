@@ -1,6 +1,33 @@
 <?php 
 require_once './auxis/db.php';
 require_once './auxis/componentes.php';
+$con = conectardb();
+$tiempo = $_GET['menu'];
+
+$sql = "SELECT * FROM tiempo WHERE tiempo = '$tiempo'";
+$resultado = mysqli_query($con,$sql);
+
+function displaymenus(){
+    $fila = "<div class='row'>";
+    for($j = 0; $j < mysqli_num_rows($GLOBALS['resultado']);$j++){
+        echo $fila;
+        for($i = 0; $i < 2; $i++){
+            if($row = mysqli_fetch_assoc($GLOBALS['resultado'])){
+                $id = $row['id_plat'];
+                $sqlTEMP =  "SELECT * FROM platillos WHERE id = $id";
+                $temp = mysqli_fetch_assoc(mysqli_query($GLOBALS['con'],$sqlTEMP));
+                $nombre = $temp['nombre'];
+                $precio = $temp['precio'];
+                $desc = $temp['descripcion'];
+                $menu = "<div class='col'><h1>$nombre</h1><h3>Precio: Q $precio</h3><p>$desc <input type='image' src='/proyectodbdw/Assets/mas.png' style = 'float:right; width:3vw;'></p></div>";
+                echo $menu;
+            } else {
+                return;
+            }
+        }
+        echo "</div>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,66 +44,7 @@ require_once './auxis/componentes.php';
         <?php menuprincipal() ?>
     </header>
     <div class="wrapper-menus">
-    <div class="row">
-        <div class="col">
-            <a href="/proyectodbdw/auxis/detalleplatillo.php"><img src="/proyectodbdw/Assets/desayunos.jpg"></a>
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-        <div class="col">
-            <img src="/proyectodbdw/Assets/desayunos.jpg">
-            <h3>Tacos de cerdo<img src="/proyectodbdw/Assets/mas.png" class="agregar"><br>Q25.00</h3>
-            <p>deliciosos taquitos de cerdo</p>
-            
-        </div>
-    </div>
+        <?php displaymenus(); ?>
     </div>
     <footer>
         <?php footer() ?>

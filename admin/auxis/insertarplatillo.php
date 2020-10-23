@@ -17,7 +17,8 @@ if(!empty($_POST['disponible'])){
 }
 
 $sql = "INSERT INTO platillos (nombre, descripcion, precio, disponible, destacado) VALUES('$nombre', '$descripcion', $precio, $disponible, $destacado)";
-if(mysqli_query($con, $sql)){
+$sql2 = "INSERT INTO tiempo VALUES(LAST_INSERT_ID(),'almuerzo')";
+if(mysqli_query($con, $sql) and mysqli_query($con, $sql2)){
     header("Location: /proyectodbdw/admin/platillos.php");
 } else {
     die("Algo salio mal <a href='/proyectodbdw/admin/platillos.php'>Regresar</a>");

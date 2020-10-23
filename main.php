@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once './auxis/db.php';
 require_once './auxis/componentes.php';
 $con = conectardb();
@@ -12,7 +12,6 @@ $con = conectardb();
     <link rel="stylesheet" href="./Estilos/dist/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <?php menuprincipal(); ?>
@@ -30,5 +29,4 @@ $con = conectardb();
     <?php footer(); ?>
     </footer>
 </body>
-
 </html>
