@@ -8,6 +8,7 @@ $sql = "SELECT * FROM tiempo WHERE tiempo = '$tiempo'";
 $resultado = mysqli_query($con,$sql);
 
 function displaymenus(){
+    $tiempo = $_GET['menu'];
     $fila = "<div class='row'>";
     for($j = 0; $j < mysqli_num_rows($GLOBALS['resultado']);$j++){
         echo $fila;
@@ -19,7 +20,11 @@ function displaymenus(){
                 $nombre = $temp['nombre'];
                 $precio = $temp['precio'];
                 $desc = $temp['descripcion'];
-                $menu = "<div class='col'><h1>$nombre</h1><h3>Precio: Q $precio</h3><p>$desc <input type='image' src='/proyectodbdw/Assets/mas.png' style = 'float:right; width:3vw;'></p></div>";
+                $menu = "<div class='col'>
+                    <h1>$nombre</h1>
+                    <h3>Precio: Q $precio</h3>
+                    <p>$desc <input onClick="."redir($id,'$tiempo')"." type='image' src='/proyectodbdw/Assets/mas.png' style = 'float:right; width:3vw;'>
+                    </p></div>";
                 echo $menu;
             } else {
                 return;
@@ -29,6 +34,12 @@ function displaymenus(){
     }
 }
 ?>
+<script>
+    function redir($id_platillo,$tempo){
+        $dir = "/proyectodbdw/auxis/agregarcarrito.php?id="+$id_platillo+"&menu="+$tempo;
+        window.location.href = $dir;
+    }
+</script>
 
 <!DOCTYPE html>
 <html>
