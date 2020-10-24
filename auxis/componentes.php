@@ -16,7 +16,7 @@ function menuprincipal(){
     $registro = "<a href='/proyectodbdw/registro.php'>Registro</a>";
     $login = "<a href='/proyectodbdw/login.php'>LogIn</a>";
     $menu = "<img src='/proyectodbdw/Assets/logo.jpg' class='logo'>
-        <a href='./main.php'>Inicio</a>
+        <a href='/proyectodbdw/main.php'>Inicio</a>
         <a href='/proyectodbdw/menus.php?menu=desayuno'>Desayunos</a>
         <a href='/proyectodbdw/menus.php?menu=almuerzo'>Almuerzos</a>
         <a href='/proyectodbdw/menus.php?menu=cena'>Cenas</a>
