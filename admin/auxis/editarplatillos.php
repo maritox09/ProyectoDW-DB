@@ -78,7 +78,7 @@ if(!empty($ing5['id_ing'])){
     </header>
     <?php permisoempleado(); ?>
     <div class="platillo"> 
-        <form action="/proyectodbdw/admin/auxis/editplat.php"  class="editar" method="post">
+        <form action="/proyectodbdw/admin/auxis/editplat.php"  class="editar" method="post" enctype="multipart/form-data">
             <h3>Datos del platillo</h3>
             <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
             Nombre: <input type="text" name="nombre" value="<?php echo $row['nombre']; ?>">

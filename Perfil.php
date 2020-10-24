@@ -22,6 +22,7 @@ $row = mysqli_fetch_assoc($resultado);
     <header>
         <?php menuprincipal() ?>
     </header>
+    <?php permisousuario() ?>
     <div class="perfil">
         <form class="user" action="/proyectodbdw/auxis/actualizarperfil.php" method="post">
             <h1>perfil</h1>

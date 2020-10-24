@@ -16,8 +16,12 @@ if(!empty($_POST['destacado'])){
 } else {
     $dest = 'false';
 }
+$tmpName = $_FILES['foto']['tmp_name'];
+$fp = fopen($tmpName, 'r');
+$data = fread($fp, filesize($tmpName));
+$data = addslashes($data);
 
-$sql = "UPDATE platillos SET nombre = '$nombre', descripcion = '$desc', precio = $precio, disponible = $disp, destacado = $dest WHERE id = $id";
+$sql = "UPDATE platillos SET nombre = '$nombre', descripcion = '$desc', precio = $precio, disponible = $disp, destacado = $dest, fotografia = '$data' WHERE id = $id";
 if(mysqli_query($con,$sql)){
     header("Location: /proyectodbdw/admin/platillos.php");
 } else {

@@ -62,7 +62,7 @@ function footer(){
         <a href='/proyectodbdw/FAQ.php'>FAQ</a>
         <img src='/proyectodbdw/Assets/logotenue.png'>
         <a href=''>Sucursales</a>
-        <a href=''>Revisa tu pedido</a>";
+        <a href='/proyectodbdw/auxis/revisapedido.php'>Revisa tu pedido</a>";
     echo $footer;
 }
 
@@ -98,9 +98,16 @@ function permisousuario(){
 
 function navadministrar(){
     if($GLOBALS['rol'] == 'empleado'){
-        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a><a href='/proyectodbdw/admin/platillos.php'>Platillos</a><a href='/proyectodbdw/admin/menus.php'>Menus</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a>
+        <a href='/proyectodbdw/admin/platillos.php'>Platillos</a>
+        <a href='/proyectodbdw/admin/menus.php'>Menus</a>
+        <a href='/proyectodbdw/admin/pedidos.php'>Pedidos</a>";
     }elseif($GLOBALS['rol'] == 'admin'){
-        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a><a href='/proyectodbdw/admin/platillos.php'>Platillos</a><a href='/proyectodbdw/admin/menus.php'>Menus</a><a href='/proyectodbdw/admin/usuarios.php'>Usuarios</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a>
+        <a href='/proyectodbdw/admin/platillos.php'>Platillos</a>
+        <a href='/proyectodbdw/admin/menus.php'>Menus</a>
+        <a href='/proyectodbdw/admin/pedidos.php'>Pedidos</a>
+        <a href='/proyectodbdw/admin/usuarios.php'>Usuarios</a>";
     }
 }
 ?>

@@ -8,7 +8,7 @@ $tiempo = $_GET['menu'];
 $sql = "INSERT INTO carrito (id_plat) VALUES ($id_plat)";
 
 if(mysqli_query($con,$sql)){
-    header("Location: /proyectodbdw/menus.php?menu=$tiempo");
+    header("Location: /proyectodbdw/carrito.php");
 } else {
     die("Algo salio mal <a href='/proyectodbdw/menus.php?menu=$tiempo'>Regresar</a>");
 }
