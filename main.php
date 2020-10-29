@@ -16,14 +16,13 @@ $con = conectardb();
     <header>
         <?php menuprincipal(); ?>
     </header>
-    <?php echo $ses; ?>
     <div class="slider">
         <a href=""><img src="./Assets/destacados.jpg"></a>
     </div>
     <div class="resto">
-        <a href="./desayunos.php"><img src="./Assets/desayunos.jpg"></a>
-        <a href=""><img src="./Assets/almuerzos.jpg"></a>
-        <a href=""><img src="./Assets/cenas.jpg"></a>
+        <a href="/proyectodbdw/menus.php?menu=desayuno"><img src="./Assets/desayunos.jpg"></a>
+        <a href="/proyectodbdw/menus.php?menu=almuerzo"><img src="./Assets/almuerzos.jpg"></a>
+        <a href="/proyectodbdw/menus.php?menu=cena"><img src="./Assets/cenas.jpg"></a>
     </div>
     <footer>
     <?php footer(); ?>

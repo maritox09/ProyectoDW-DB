@@ -84,10 +84,10 @@ if(!empty($ing5['id_ing'])){
             Nombre: <input type="text" name="nombre" value="<?php echo $row['nombre']; ?>">
             Descripcion: <input type="text" name="descripcion" value="<?php echo $row['descripcion']; ?>">
             Precio: <input type="text" name="precio" value="<?php echo $row['precio']; ?>">
-            Fotografia: <input type="file" name="foto" value="<?php echo $row['fotografia']; ?>">
+            Fotografia: <input type="file" name="foto" value="">
             Disponible: <input type="checkbox" name="disponible" <?php echo $disp ?>>
             Destacado: <input type="checkbox" name="destacado" <?php echo $dest ?>>
-            <input type="submit" value="Actualizar">
+            <input type="submit" value="Actualizar" class="ok">
         </form>
         <form action="/proyectodbdw/admin/auxis/editplating.php"  class="editar" method="post">
             <div class="platillo">
@@ -121,7 +121,7 @@ if(!empty($ing5['id_ing'])){
                     <input type="hidden" name="id5" value="<?php echo $ing5['id']; ?>">
                 </div>
             </div>
-            <input type="submit" value="Actualizar">
+            <input type="submit" value="Actualizar" class="ok">
         </form>
     </div>
     <footer>

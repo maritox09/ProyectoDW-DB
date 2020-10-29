@@ -2,18 +2,15 @@
 require_once './auxis/db.php';
 require_once './auxis/componentes.php';
 $con = conectardb();
-$tiempo = $_GET['menu'];
-
-$sql = "SELECT * FROM tiempo WHERE tiempo = '$tiempo'";
-$resultado = mysqli_query($con,$sql);
 
 function displaymenus(){
     $tiempo = $_GET['menu'];
-    $fila = "<div class='row'>";
-    for($j = 0; $j < mysqli_num_rows($GLOBALS['resultado']);$j++){
-        echo $fila;
+    $sql = "SELECT * FROM tiempo WHERE tiempo = '$tiempo'";
+    $resultado = mysqli_query($GLOBALS['con'],$sql);
+    for($j = 0; $j < mysqli_num_rows($resultado);$j++){
+        echo "<div class='row'>";
         for($i = 0; $i < 2; $i++){
-            if($row = mysqli_fetch_assoc($GLOBALS['resultado'])){
+            if($row = mysqli_fetch_assoc($resultado)){
                 $id = $row['id_plat'];
                 $sqlTEMP =  "SELECT * FROM platillos WHERE id = $id";
                 $temp = mysqli_fetch_assoc(mysqli_query($GLOBALS['con'],$sqlTEMP));

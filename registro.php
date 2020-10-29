@@ -48,7 +48,7 @@ if(!empty($_GET['msg'])){
             <input type="password" name="contrasena" placeholder="Contraseña" required>
             <label for="contrasena2">Confirme su contraseña</label>
             <input type="password" name="contrasena2" placeholder="Confirme su contraseña" required>
-            <input type="submit" value="Registrarse">
+            <input type="submit" value="Registrarse" class="ok">
         </form>
     </div>
     <footer>

@@ -16,6 +16,10 @@ header {
         margin-right: 0.75em;
         margin-left: 0.75em;
     }
+    a:hover {
+        color: $coloracento;
+        text-decoration: none;
+    }
 }
 
 footer {
@@ -38,6 +42,10 @@ footer {
         font-size: 3vh;
         margin-right: 1em;
         margin-left: 1em;
+    }
+    a:hover {
+        color: $coloracento;
+        text-decoration: none;
     }
     img {
         height: 100%;
@@ -74,6 +82,37 @@ body {
             border-color: $coloracento;
         }
     }
+}
+
+.ok {
+    background: $coloracento;
+    border-style: solid;
+    color: $coloracento2;
+    margin: 0.1vw;
+}
+
+.error {
+    background: $coloracento2;
+    border-style: solid;
+    color: $colorsecundario;
+    margin: 0.1vw;
+}
+
+.btn-editar {
+    color: $coloracento2;
+    font-style: italic;
+}
+
+.btn-primary {
+    background: $coloracento;
+    color: $coloracento2;
+    font-style: italic;
+}
+
+.btn-primary:hover {
+    background: $colorprincipal;
+    color: $coloracento2;
+    font-style: italic;
 }
 
 .user {
@@ -165,8 +204,8 @@ body {
 }
 
 .wrapper-menus {
-    margin-bottom: 4vw;
-    width: 100%;
+    margin: 2vw;
+    width: 95%;
     .col {
         min-width: 33vw;
         display: flex;
@@ -189,7 +228,7 @@ body {
     .row {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
     }
 }
 

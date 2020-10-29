@@ -36,7 +36,7 @@ $resultado = mysqli_query($con,"SELECT * FROM estadopedidos")
                             <tr>
                                 <td><?php echo $row['id_pedido'];?></td>
                                 <td><?php echo $row['estado'];?></td>
-                                <td><a href="/proyectodbdw/admin/auxis/editarestadopedido.php?id=<?php echo $row['id_pedido']?>">click para editar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/editarestadopedido.php?id=<?php echo $row['id_pedido']?>&estado=<?php echo $row['estado']?>" class="btn-editar">Siguiente</a></td>
                             </tr>
                             <?php
                         }

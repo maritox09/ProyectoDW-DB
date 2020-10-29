@@ -38,7 +38,7 @@ if(!empty($_GET['msg'])){
             <input type="text" name="correo" placeholder="juanperez@gmail.com">
             <label for="contrasena">Contraseña</label>
             <input type="password" name="contrasena" placeholder="Contraseña">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" class="ok">
         </form>
     </div>
     <footer>

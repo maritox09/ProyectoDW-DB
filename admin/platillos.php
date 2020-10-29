@@ -33,7 +33,7 @@ function read(){
             Precio: <input type="number" name="precio" required>
             Destacado: <input type="checkbox" name="destacado">
             Disponible: <input type="checkbox" name="disponible" checked>
-            <input type="submit" value="Ingresar">
+            <input type="submit" value="Ingresar" class="ok">
         </form>
     </div>
     <div>
@@ -62,8 +62,8 @@ function read(){
                                 <td data-id = "<?php echo $row['id']; ?>"><img style="width: 10vw;" src='data:image/jpg; base64,<?php echo base64_encode($row['fotografia']) ?>'></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['destacado'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['disponible'];?></td>
-                                <td><a href="/proyectodbdw/admin/auxis/editarplatillos.php?id=<?php echo $row['id']?>">click</a></td>
-                                <td><a href="/proyectodbdw/admin/auxis/borrarplatillos.php?id=<?php echo $row['id']?>">click</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/editarplatillos.php?id=<?php echo $row['id']?>" class="btn-editar">click</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/borrarplatillos.php?id=<?php echo $row['id']?>" class="btn-editar">click</a></td>
                             </tr>
                             <?php
                             }

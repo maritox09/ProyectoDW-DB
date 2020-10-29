@@ -20,7 +20,7 @@ function menuprincipal(){
         <a href='/proyectodbdw/menus.php?menu=desayuno'>Desayunos</a>
         <a href='/proyectodbdw/menus.php?menu=almuerzo'>Almuerzos</a>
         <a href='/proyectodbdw/menus.php?menu=cena'>Cenas</a>
-        <a href=''>Promocionales</a>
+        <a href=''>Destacados</a>
         <a href=''>Historia</a>";
 
     if($GLOBALS['ses'] != -1){
@@ -61,7 +61,7 @@ function footer(){
     $footer = "<a href='/proyectodbdw/contacto.php'>Contactanos</a>
         <a href='/proyectodbdw/FAQ.php'>FAQ</a>
         <img src='/proyectodbdw/Assets/logotenue.png'>
-        <a href=''>Sucursales</a>
+        <a href=''></a>
         <a href='/proyectodbdw/auxis/revisapedido.php'>Revisa tu pedido</a>";
     echo $footer;
 }

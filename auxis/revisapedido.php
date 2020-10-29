@@ -18,7 +18,7 @@ require_once '/xampp/htdocs/Proyectodbdw/auxis/componentes.php';
         <form class="editar" action="/proyectodbdw/orden.php" method="get">
             <h1>Ingresa el numero de pedido</h1>
             Estado: <input type="text" name="id" required>
-            <input type="submit" value="Revisar estado del pedido">
+            <input type="submit" value="Revisar estado del pedido" class="ok">
         </form>
     </div>
     <footer> <?php footer(); ?> </footer>

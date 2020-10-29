@@ -30,7 +30,7 @@ function read(){
         <form method="post" action="/proyectodbdw/admin/auxis/insertaringrediente.php" class="ingredientes">
             Ingrediente: <input type="text" name="nombre" required>
             Cantidad: <input type="text" name="cantidad" required>
-            <input type="submit" value="Ingresar">
+            <input type="submit" value="Ingresar" class="ok">
         </form>
     </div>
     <div>
@@ -52,8 +52,8 @@ function read(){
                             <tr>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['nombre'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['cantidad'];?></td>
-                                <td><a href="/proyectodbdw/admin/auxis/editaringrediente.php?id=<?php echo $row['id']?>">click para editar</a></td>
-                                <td><a href="/proyectodbdw/admin/auxis/borraringrediente.php?id=<?php echo $row['id']?>">click para borrar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/editaringrediente.php?id=<?php echo $row['id']?>" class="btn-editar">Click para editar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/borraringrediente.php?id=<?php echo $row['id']?>" class="btn-editar">click para borrar</a></td>
                             </tr>
                             <?php
                             }

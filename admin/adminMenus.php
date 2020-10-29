@@ -41,7 +41,7 @@ $resultado = mysqli_query($con, "SELECT * FROM tiempo WHERE tiempo = '$tiempo'")
                             <tr>
                                 <td><?php echo $temp['nombre'];?></td>
                                 <td><?php echo $row['tiempo'];?></td>
-                                <td><a href="/proyectodbdw/admin/auxis/cambiardemenu.php?id=<?php echo $row['id_plat']?>&nombre=<?php echo $temp['nombre']?>">cambiar de menu</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/cambiardemenu.php?id=<?php echo $row['id_plat']?>&nombre=<?php echo $temp['nombre']?>" class="btn-editar">cambiar de menu</a></td>
                             </tr>
                         <?php
                         }

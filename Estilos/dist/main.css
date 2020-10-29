@@ -16,6 +16,10 @@ header a {
   margin-right: 0.75em;
   margin-left: 0.75em;
 }
+header a:hover {
+  color: #8fd296;
+  text-decoration: none;
+}
 
 footer {
   height: 8vh;
@@ -38,6 +42,10 @@ footer a {
   font-size: 3vh;
   margin-right: 1em;
   margin-left: 1em;
+}
+footer a:hover {
+  color: #8fd296;
+  text-decoration: none;
 }
 footer img {
   height: 100%;
@@ -73,6 +81,37 @@ body .resto img {
   border-style: solid;
   border-width: 10px;
   border-color: #8fd296;
+}
+
+.ok {
+  background: #8fd296;
+  border-style: solid;
+  color: #b43232;
+  margin: 0.1vw;
+}
+
+.error {
+  background: #b43232;
+  border-style: solid;
+  color: #ffffff;
+  margin: 0.1vw;
+}
+
+.btn-editar {
+  color: #b43232;
+  font-style: italic;
+}
+
+.btn-primary {
+  background: #8fd296;
+  color: #b43232;
+  font-style: italic;
+}
+
+.btn-primary:hover {
+  background: #ef9c00;
+  color: #b43232;
+  font-style: italic;
 }
 
 .user {
@@ -164,8 +203,8 @@ body .resto img {
 }
 
 .wrapper-menus {
-  margin-bottom: 4vw;
-  width: 100%;
+  margin: 2vw;
+  width: 95%;
 }
 .wrapper-menus .col {
   min-width: 33vw;
@@ -189,7 +228,7 @@ body .resto img {
 .wrapper-menus .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .wrapper-platillos {

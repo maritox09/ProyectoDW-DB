@@ -24,7 +24,7 @@ $id = $_POST['id'];
             Contraseña actual: <input type="text" name="actual" required>
             Nueva contraseña: <input type="text" name="nueva" required>
             repita nueva contraseña: <input type="text" name="nueva2" required>
-            <input type="submit" value="Cambiar contraseña">
+            <input type="submit" value="Cambiar contraseña" class="ok">
         </form>
     </div>
     <footer>

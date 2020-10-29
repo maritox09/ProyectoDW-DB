@@ -31,7 +31,7 @@ $row = mysqli_fetch_assoc($resultado);
             ID: <input type="text" name="id" required value="<?php echo $row['id']; ?>" readonly>
             Ingrediente: <input type="text" name="nombre" required value="<?php echo $row['nombre']; ?>">
             Cantidad: <input type="text" name="cantidad" required value="<?php echo $row['cantidad']; ?>">
-            <input type="submit" value="Actualizar">
+            <input type="submit" value="Actualizar" class="ok">
         </form>
     </div>
     <div class="editar">
@@ -40,7 +40,7 @@ $row = mysqli_fetch_assoc($resultado);
             <input type="hidden" name="id" required value="<?php echo $row['id']; ?>" readonly>
             <input type="hidden" name="nombre" required value="<?php echo $row['nombre']; ?>">
             Cantidad: <input type="text" name="cantidad" required>
-            <input type="submit" value="Actualizar">
+            <input type="submit" value="Actualizar" class="ok">
         </form>
     </div>
     <footer>
