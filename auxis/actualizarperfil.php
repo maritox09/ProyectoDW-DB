@@ -1,20 +1,5 @@
 <?php
-
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
-
+require_once '/xampp/htdocs/Proyectodbdw/auxis/db.php';
 $con = conectardb();
 
 $id = $_POST['id'];
@@ -23,12 +8,18 @@ $apellido = $_POST['apellido'];
 $correo = $_POST['correo'];
 $telefono = $_POST['telefono'];
 $direccion = $_POST['direccion'];
-$tarjeta = $_POST['tarjeta'];
-$vencimiento = $_POST['vencimiento'];
+if(!empty($_POST['tarjeta'])){
+    $tarjeta = $_POST['tarjeta'];
+} else {
+    $tarjeta = "null";
+}
+if(!empty($_POST['vencimiento'])){
+    $vencimiento = $_POST['vencimiento']."-01";
+} else {
+    $vencimiento = "9999-09-09";
+}
 
-echo $vencimiento;
-
-$sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', correo = '$correo', telefono = $telefono, direccion = '$direccion' WHERE id_usuario = $id";
+$sql = "UPDATE usuarios SET nombre = '$nombre', apellido = '$apellido', correo = '$correo', telefono = $telefono, direccion = '$direccion', notarjeta = $tarjeta, vencimiento = '$vencimiento' WHERE id_usuario = $id";
 if(mysqli_query($con,$sql)){
     header("Location: /proyectodbdw/perfil.php");
 } else {

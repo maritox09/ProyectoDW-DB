@@ -6,6 +6,8 @@ $con = conectardb();
 $sql = "SELECT * FROM usuarios WHERE id_usuario = $ses";
 $resultado = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($resultado);
+$vencimiento = $row['vencimiento'];
+$vencimiento_form = substr($vencimiento,0,7);
 
 ?>
 
@@ -33,7 +35,7 @@ $row = mysqli_fetch_assoc($resultado);
             Direccion: <input type="text" name="direccion" value="<?php echo $row['direccion'] ?>" required>
             Telefono: <input type="text" name="telefono" value="<?php echo $row['telefono'] ?>" required>
             No. de Tarjeta: <input type="text" name="tarjeta" value="<?php echo $row['notarjeta'] ?>">
-            Fecha de vencimiento:<input type="month" name="vencimiento" value="<?php echo $row['vencimiento'] ?>">
+            Fecha de vencimiento:<input type="month" name="vencimiento" value="<?php echo $vencimiento_form ?>">
             <input type="submit" value="Actualizar Datos" class="ok">
             <button form="contra" class="error">Cambiar contraseña</button>
         </form>

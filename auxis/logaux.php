@@ -1,22 +1,6 @@
 <?php
-
 session_start();
-
-function conectardb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "proyectodbdw";
-
-    $con = mysqli_connect($servername,$username,$password,$dbname);
-
-    if(!$con){
-        die("fallo de conexion" .mysqli_connect_error());
-    }else{
-        return $con;
-    }
-}
-
+require_once '/xampp/htdocs/Proyectodbdw/auxis/db.php';
 $con =  conectardb();
 
 function comprobar(){
@@ -49,6 +33,8 @@ $comp = comprobar();
 $rol = rol($comp);
 $_SESSION["id"] = $comp;
 $_SESSION["rol"] = $rol;
+
+mysqli_query($con,"UPDATE usuarios SET last_login = CURDATE() WHERE id_usuario = $comp");
 
 if(!empty($_SESSION['id'])){
     header("Location: /proyectodbdw/main.php");
