@@ -43,7 +43,9 @@ $resultado = mysqli_query($con,"SELECT * FROM usuarios INNER JOIN roles ON usuar
                     <td>Correo</td>
                     <td>Direccion</td>
                     <td>Rol</td>
+                    <td>Activo</td>
                     <td>Editar Usuario</td>
+                    <td>Inactivar / activar</td>
                 </tr>
             </thead>
             <tbody>
@@ -56,7 +58,9 @@ $resultado = mysqli_query($con,"SELECT * FROM usuarios INNER JOIN roles ON usuar
                                 <td><?php echo $row['correo'];?></td>
                                 <td><?php echo $row['direccion'];?></td>
                                 <td><?php echo $row['rol'];?></td>
+                                <td><?php echo $row['activo'];?></td>
                                 <td><a href="/proyectodbdw/admin/auxis/editarusuario.php?id=<?php echo $row['id_usuario']?>" class="btn-editar">Click para editar</a></td>
+                                <td><a href="/proyectodbdw/admin/auxis/inactivar.php?id=<?php echo $row['id_usuario']?>&estado=<?php echo $row['activo'];?>" class="btn-editar">Cambiar</a></td>
                             </tr>
                             <?php
                             }

@@ -14,7 +14,10 @@ if(!empty($_GET['msg'])){
         $msg = "<h4>No existe ningun usuario con ese correo asignado...</h4>";
     } elseif($error == "nocr"){
         $msg = "<h4>Contraseña incorrecta...</h4>";
+    } elseif($error == "inc"){
+        $msg = "<h4>Usuario inactivo...</h4>";
     }
+    
 }else{
     $msg = '';
 }

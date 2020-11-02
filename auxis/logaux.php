@@ -10,11 +10,15 @@ function comprobar(){
     $resultado = mysqli_query($GLOBALS['con'], $sql);
     if(mysqli_num_rows($resultado) > 0){
         $row = mysqli_fetch_assoc($resultado);
-        if($row['correo'] == $correo){
-            if($row['password'] == $contrasena){
-                return ($row['id_usuario']);
-            } else {
-                header("Location: /proyectodbdw/login.php?msg=nocr");
+        if($row['activo'] == 0){
+            header("Location: /proyectodbdw/login.php?msg=inc");
+        } else {
+            if($row['correo'] == $correo){
+                if($row['password'] == $contrasena){
+                    return ($row['id_usuario']);
+                } else {
+                    header("Location: /proyectodbdw/login.php?msg=nocr");
+                }
             }
         }
     } else{
