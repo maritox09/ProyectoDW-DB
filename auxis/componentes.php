@@ -20,7 +20,7 @@ function menuprincipal(){
         <a href='/proyectodbdw/menus.php?menu=desayuno'>Desayunos</a>
         <a href='/proyectodbdw/menus.php?menu=almuerzo'>Almuerzos</a>
         <a href='/proyectodbdw/menus.php?menu=cena'>Cenas</a>
-        <a href=''>Destacados</a>
+        <a href='/proyectodbdw/destacados.php'>Destacados</a>
         <a href='http://localhost:3000/'>Historia</a>";
 
     if($GLOBALS['ses'] != -1){
