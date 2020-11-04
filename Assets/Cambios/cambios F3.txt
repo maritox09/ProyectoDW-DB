@@ -1,0 +1,10 @@
+Guardar HTML
+Colocar sucursales en contacto**
+cambiar FAQ con otro estilo**
+Estilizar boton de confirmar orden**
+Estilizar links de admin**
+llenar mas estado de orden, colocar agradecimiento por orden**
+Agregar listado, e info de cliente de platillos en ordenes**
+que pedidos solo puedan seguir el flujo**
+Creacion de menus nuevos y manejo
+Explicar tags en manual tecnico con explicacion semantica (manual tecnico)

@@ -21,7 +21,7 @@ function menuprincipal(){
         <a href='/proyectodbdw/menus.php?menu=almuerzo'>Almuerzos</a>
         <a href='/proyectodbdw/menus.php?menu=cena'>Cenas</a>
         <a href=''>Destacados</a>
-        <a href=''>Historia</a>";
+        <a href='http://localhost:3000/'>Historia</a>";
 
     if($GLOBALS['ses'] != -1){
         if($GLOBALS['rol'] == 'visitante'){
