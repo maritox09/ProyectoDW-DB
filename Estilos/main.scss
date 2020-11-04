@@ -84,6 +84,11 @@ body {
     }
 }
 
+.busqueda {
+    float: right;
+    margin: 0.5vw;
+}
+
 .ok {
     background: $coloracento;
     border-style: solid;
@@ -207,6 +212,7 @@ body {
     margin: 2vw;
     width: 95%;
     .col {
+        max-height: 30vh;
         min-width: 33vw;
         display: flex;
         flex-direction: column;

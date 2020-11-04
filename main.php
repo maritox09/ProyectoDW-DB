@@ -17,8 +17,14 @@ $con = conectardb();
     <header>
         <?php menuprincipal(); ?>
     </header>
+    <div class="busqueda">
+        <form action="/proyectodbdw/buscar.php" method="post">
+            <input type="text" name="busca" placeholder="buscar">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
     <div class="slider">
-        <a href=""><img src="./Assets/destacados.jpg"></a>
+        <a href="/proyectodbdw/destacados.php"><img src="./Assets/destacados.jpg"></a>
     </div>
     <div class="resto">
         <a href="/proyectodbdw/menus.php?menu=desayuno"><img src="./Assets/desayunos.jpg"></a>

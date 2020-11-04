@@ -83,6 +83,11 @@ body .resto img {
   border-color: #8fd296;
 }
 
+.busqueda {
+  float: right;
+  margin: 0.5vw;
+}
+
 .ok {
   background: #8fd296;
   border-style: solid;
@@ -207,6 +212,7 @@ body .resto img {
   width: 95%;
 }
 .wrapper-menus .col {
+  max-height: 30vh;
   min-width: 33vw;
   display: flex;
   flex-direction: column;
