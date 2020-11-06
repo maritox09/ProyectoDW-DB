@@ -1,4 +1,13 @@
 @import "./colores";
+@mixin mixin_boton($color, $background, $border_style, $border_color, $margin, $font_style) {
+    color: $color;
+    background: $background;
+    border-style: $border_style;
+    border-color: $border_color;
+    margin: $margin;
+    font-style: $font_style;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -90,34 +99,23 @@ body {
 }
 
 .ok {
-    background: $coloracento;
-    border-style: solid;
-    color: $coloracento2;
-    margin: 0.1vw;
+    @include mixin_boton($coloracento2, $coloracento, solid, grey, 0.5vw, none);
 }
 
 .error {
-    background: $coloracento2;
-    border-style: solid;
-    color: $colorsecundario;
-    margin: 0.1vw;
+    @include mixin_boton($colorsecundario, $coloracento2, solid, grey, 0.1vw, none);
 }
 
 .btn-editar {
-    color: $coloracento2;
-    font-style: italic;
+    @include mixin_boton($coloracento2, none, none, none, 0.1vw, italic);
 }
 
 .btn-primary {
-    background: $coloracento;
-    color: $coloracento2;
-    font-style: italic;
+    @include mixin_boton($coloracento2, $coloracento, solid, grey, none, italic);
 }
 
 .btn-primary:hover {
-    background: $colorprincipal;
-    color: $coloracento2;
-    font-style: italic;
+    @include mixin_boton($colorsecundario, $colorprincipal, solid, grey, none, italic);
 }
 
 .user {

@@ -89,33 +89,47 @@ body .resto img {
 }
 
 .ok {
+  color: #b43232;
   background: #8fd296;
   border-style: solid;
-  color: #b43232;
-  margin: 0.1vw;
+  border-color: grey;
+  margin: 0.5vw;
+  font-style: none;
 }
 
 .error {
+  color: #ffffff;
   background: #b43232;
   border-style: solid;
-  color: #ffffff;
+  border-color: grey;
   margin: 0.1vw;
+  font-style: none;
 }
 
 .btn-editar {
   color: #b43232;
+  background: none;
+  border-style: none;
+  border-color: none;
+  margin: 0.1vw;
   font-style: italic;
 }
 
 .btn-primary {
-  background: #8fd296;
   color: #b43232;
+  background: #8fd296;
+  border-style: solid;
+  border-color: grey;
+  margin: none;
   font-style: italic;
 }
 
 .btn-primary:hover {
+  color: #ffffff;
   background: #ef9c00;
-  color: #b43232;
+  border-style: solid;
+  border-color: grey;
+  margin: none;
   font-style: italic;
 }
 
