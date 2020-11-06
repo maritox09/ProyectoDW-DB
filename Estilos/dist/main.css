@@ -95,6 +95,7 @@ body .resto img {
   border-color: grey;
   margin: 0.5vw;
   font-style: none;
+  text-decoration: none;
 }
 
 .error {
@@ -104,6 +105,7 @@ body .resto img {
   border-color: grey;
   margin: 0.1vw;
   font-style: none;
+  text-decoration: none;
 }
 
 .btn-editar {
@@ -113,6 +115,17 @@ body .resto img {
   border-color: none;
   margin: 0.1vw;
   font-style: italic;
+  text-decoration: none;
+}
+
+.btn-editar:hover {
+  color: #8fd296;
+  background: none;
+  border-style: none;
+  border-color: none;
+  margin: 0.1vw;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .btn-primary {
@@ -122,6 +135,7 @@ body .resto img {
   border-color: grey;
   margin: none;
   font-style: italic;
+  text-decoration: none;
 }
 
 .btn-primary:hover {
@@ -131,6 +145,7 @@ body .resto img {
   border-color: grey;
   margin: none;
   font-style: italic;
+  text-decoration: none;
 }
 
 .user {

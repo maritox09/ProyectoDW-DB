@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import './main.css';
+import MenuPrincipal from './header';
+import MenuFooter from './footer';
+import Contenido from './contenido';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <MenuPrincipal/>
+      <Contenido/>
+      <MenuFooter/>
     </div>
   );
 }

@@ -98,16 +98,16 @@ function permisousuario(){
 
 function navadministrar(){
     if($GLOBALS['rol'] == 'empleado'){
-        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a>
-        <a href='/proyectodbdw/admin/platillos.php'>Platillos</a>
-        <a href='/proyectodbdw/admin/menus.php'>Menus</a>
-        <a href='/proyectodbdw/admin/pedidos.php'>Pedidos</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'class='btn-editar'>Ingredientes</a>
+        <a href='/proyectodbdw/admin/platillos.php' class='btn-editar'>Platillos</a>
+        <a href='/proyectodbdw/admin/menus.php'class='btn-editar'>Menus</a>
+        <a href='/proyectodbdw/admin/pedidos.php'class='btn-editar'>Pedidos</a>";
     }elseif($GLOBALS['rol'] == 'admin'){
-        echo "<a href='/proyectodbdw/admin/ingredientes.php'>Ingredientes</a>
-        <a href='/proyectodbdw/admin/platillos.php'>Platillos</a>
-        <a href='/proyectodbdw/admin/menus.php'>Menus</a>
-        <a href='/proyectodbdw/admin/pedidos.php'>Pedidos</a>
-        <a href='/proyectodbdw/admin/usuarios.php'>Usuarios</a>";
+        echo "<a href='/proyectodbdw/admin/ingredientes.php'class='btn-editar'>Ingredientes</a>
+        <a href='/proyectodbdw/admin/platillos.php'class='btn-editar'>Platillos</a>
+        <a href='/proyectodbdw/admin/menus.php'class='btn-editar'>Menus</a>
+        <a href='/proyectodbdw/admin/pedidos.php'class='btn-editar'>Pedidos</a>
+        <a href='/proyectodbdw/admin/usuarios.php'class='btn-editar'>Usuarios</a>";
     }
 }
 ?>

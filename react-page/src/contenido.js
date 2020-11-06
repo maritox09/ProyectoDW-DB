@@ -1,0 +1,24 @@
+import React from 'react';
+import './main.css';
+import Fam from './familia.jpg';
+
+function App(){
+    return(
+        <div className="wrapper-platillos">
+            <p>
+                <img src={Fam} className = 'fam'></img>
+                <h1>Historia de Mr.Taco</h1>
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget odio sed nisi dictum dictum ut quis est. Praesent maximus vitae ligula nec convallis. Quisque dignissim lacus ut tempus tempus. Phasellus volutpat sapien magna, at varius mi lacinia ut. Aenean varius elit in est consectetur fringilla. Nam et quam venenatis, aliquet libero non, malesuada diam. Vestibulum semper nec ligula quis laoreet. Fusce iaculis massa id dolor fringilla tempor.
+                Nullam faucibus eros eu placerat gravida. Mauris sed tempor tellus, ac pretium tortor. Integer sit amet elit ligula. In quis felis sed odio pulvinar porttitor. Donec imperdiet nisi ut metus tristique porta. Nulla lorem eros, porttitor eget nisl tincidunt, imperdiet vehicula sapien. Integer rutrum ex ac accumsan euismod.
+                Mauris quis tellus ipsum. Praesent rhoncus sollicitudin eros, vel tincidunt nibh eleifend vel. Ut ac orci in mi venenatis tempus. Ut condimentum sodales massa ut porta. Proin malesuada sollicitudin porttitor. Aliquam ultrices pharetra pretium. Nullam lacinia enim non erat scelerisque blandit. Nulla sodales sapien congue, eleifend lacus eget, consectetur nisl. Sed porttitor fermentum neque, vitae laoreet dui feugiat non. Duis vel est aliquet, sodales turpis quis, ullamcorper elit. Cras pharetra justo a metus consequat viverra. Sed purus enim, pellentesque tristique ullamcorper eget, porttitor vel enim. Maecenas eleifend lacus velit, sit amet tempor tellus laoreet nec. Quisque commodo lectus condimentum tortor vestibulum tempor.
+                Cras viverra tellus varius diam euismod porta.<br></br><br></br> In efficitur condimentum risus eget molestie. Donec a est in lorem pharetra pharetra et convallis nibh. Etiam vel tempor sapien. Sed feugiat nibh ut est consectetur sagittis. Nunc tincidunt lorem eu nibh vulputate accumsan. Sed aliquet nibh sapien, at vehicula magna congue vitae. Vestibulum rhoncus quam nec libero volutpat tincidunt. Nulla ut purus mauris. Mauris vitae lacus eget quam bibendum volutpat id quis lectus. Praesent eu dolor nibh. Nullam ut dolor luctus, malesuada lorem sed, congue turpis. Aenean ut velit mollis, pharetra ex eu, ornare odio. Morbi mollis eleifend eros sed euismod. Ut facilisis sit amet mi sed suscipit. Pellentesque dignissim tristique neque, sit amet vulputate sapien bibendum nec.
+                Aenean mollis fringilla odio ut molestie. Vestibulum a mollis turpis, vitae ultrices dui. Proin turpis erat, viverra at tincidunt sed, tincidunt vel arcu. Nulla leo turpis, blandit vitae lectus vel, imperdiet molestie lacus. Cras at metus porta, ultrices orci nec, fringilla nibh. Fusce viverra auctor magna, at dignissim velit suscipit eu. Aliquam luctus sem lectus, in gravida purus varius quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget odio sed nisi dictum dictum ut quis est. Praesent maximus vitae ligula nec convallis. Quisque dignissim lacus ut tempus tempus. Phasellus volutpat sapien magna, at varius mi lacinia ut. Aenean varius elit in est consectetur fringilla. Nam et quam venenatis, aliquet libero non, malesuada diam. Vestibulum semper nec ligula quis laoreet. Fusce iaculis massa id dolor fringilla tempor.
+                Nullam faucibus eros eu placerat gravida. Mauris sed tempor tellus, ac pretium tortor. Integer sit amet elit ligula. In quis felis sed odio pulvinar porttitor.<br></br><br></br> Donec imperdiet nisi ut metus tristique porta. Nulla lorem eros, porttitor eget nisl tincidunt, imperdiet vehicula sapien. Integer rutrum ex ac accumsan euismod.
+                Mauris quis tellus ipsum. Praesent rhoncus sollicitudin eros, vel tincidunt nibh eleifend vel. Ut ac orci in mi venenatis tempus. Ut condimentum sodales massa ut porta. Proin malesuada sollicitudin porttitor. Aliquam ultrices pharetra pretium. Nullam lacinia enim non erat scelerisque blandit. Nulla sodales sapien congue, eleifend lacus eget, consectetur nisl. Sed porttitor fermentum neque, vitae laoreet dui feugiat non. Duis vel est aliquet, sodales turpis quis, ullamcorper elit. Cras pharetra justo a metus consequat viverra. Sed purus enim, pellentesque tristique ullamcorper eget, porttitor vel enim. Maecenas eleifend lacus velit, sit amet tempor tellus laoreet nec. Quisque commodo lectus condimentum tortor vestibulum tempor.
+                Cras viverra tellus varius diam euismod porta. In efficitur condimentum risus eget molestie.</h3>
+            </p>
+        </div>
+    );
+}
+
+export default App;

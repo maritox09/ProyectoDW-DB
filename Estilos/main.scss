@@ -6,6 +6,7 @@
     border-color: $border_color;
     margin: $margin;
     font-style: $font_style;
+    text-decoration: none;
 }
 
 header {
@@ -108,6 +109,10 @@ body {
 
 .btn-editar {
     @include mixin_boton($coloracento2, none, none, none, 0.1vw, italic);
+}
+
+.btn-editar:hover {
+    @include mixin_boton($coloracento, none, none, none, 0.1vw, italic);
 }
 
 .btn-primary {
