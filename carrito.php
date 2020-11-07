@@ -64,7 +64,7 @@ $total = 0;
         </table>
         <div class="row">
             <div class="col">
-                <input type="button" onclick="redir()" value="Confirmar orden">
+                <input type="button" onclick="redir()" value="Confirmar orden" class="ok">
             </div>
         </div>
     </div>
