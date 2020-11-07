@@ -62,8 +62,5 @@ function read(){
             </tbody>
         </table>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

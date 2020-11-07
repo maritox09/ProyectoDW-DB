@@ -58,7 +58,7 @@ function read(){
                             <tr>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['nombre'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['descripcion'];?></td>
-                                <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['precio'];?></td>
+                                <td data-id = "<?php echo $row['id']; ?>">Q <?php echo $row['precio'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><img style="width: 10vw;" src='data:image/jpg; base64,<?php echo base64_encode($row['fotografia']) ?>'></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['destacado'];?></td>
                                 <td data-id = "<?php echo $row['id']; ?>"><?php echo $row['disponible'];?></td>
@@ -72,8 +72,5 @@ function read(){
             </tbody>
         </table>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

@@ -66,7 +66,14 @@ body .slider img {
   border-width: 10px;
   border-color: #8fd296;
   margin-top: 3vh;
-  width: 50vw;
+  width: 40vw;
+}
+body .slider h5,
+body .slider p {
+  color: #b43232;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #8fd296;
 }
 body .resto {
   display: flex;
@@ -188,6 +195,11 @@ body .resto img {
 }
 .editar h3 {
   margin: 0px;
+}
+
+.comentario {
+  height: 5vh;
+  width: 20vw !important;
 }
 
 .platillo {
@@ -318,7 +330,6 @@ nav a {
 table {
   margin: 1vw;
   align-items: center;
-  table-layout: fixed;
   width: 98%;
 }
 table thead th,

@@ -50,8 +50,5 @@ $resultado = mysqli_query($con, "SELECT * FROM tiempo WHERE tiempo = '$tiempo'")
             </tbody>
         </table>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

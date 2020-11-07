@@ -69,8 +69,5 @@ $resultado = mysqli_query($con,"SELECT * FROM usuarios INNER JOIN roles ON usuar
             </tbody>
         </table>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

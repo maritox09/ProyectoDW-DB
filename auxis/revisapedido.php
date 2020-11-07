@@ -13,7 +13,6 @@ require_once '/xampp/htdocs/Proyectodbdw/auxis/componentes.php';
 </head>
 <body>
 <header> <?php menuadmin(); ?> </header>
-    <?php permisousuario(); ?>
     <div class="wrapper-platillos">
         <form class="editar" action="/proyectodbdw/orden.php" method="get">
             <h1>Ingresa el numero de pedido</h1>

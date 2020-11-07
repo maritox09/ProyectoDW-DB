@@ -60,8 +60,5 @@ $resultado2 = mysqli_query($con,"SELECT * FROM pedidos");
             </tbody>
         </table>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

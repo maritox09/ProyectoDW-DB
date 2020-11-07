@@ -23,8 +23,5 @@ require_once '/xampp/htdocs/Proyectodbdw/auxis/componentes.php';
             <a href='/proyectodbdw/admin/adminMenus.php?menu=cena'>Cenas</a>
         </nav>
     </div>
-    <footer>
-        <?php footer(); ?>
-    </footer>
 </body>
 </html>

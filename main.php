@@ -2,6 +2,10 @@
 require_once './auxis/db.php';
 require_once './auxis/componentes.php';
 $con = conectardb();
+$sql = "SELECT * FROM platillos WHERE destacado = true";
+$resultado = mysqli_query($con,$sql);
+$row = mysqli_fetch_assoc($resultado);
+$foto = $row['fotografia'];
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +28,26 @@ $con = conectardb();
         </form>
     </div>
     <div class="slider">
-        <a href="/proyectodbdw/destacados.php"><img src="./Assets/destacados.jpg"></a>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <?php echo "<img src='data:image/jpg; base64,".base64_encode($foto)."'>"; ?>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><?php echo $row['nombre']; ?></h5>
+                        <p><?php echo $row['descripcion']; ?></p>
+                    </div>
+                </div>
+                <?php while ($row = mysqli_fetch_assoc($resultado)){ $foto = $row['fotografia'];?>
+                <div class="carousel-item">
+                    <?php echo "<img src='data:image/jpg; base64,".base64_encode($foto)."'>"; ?>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5><?php echo $row['nombre']; ?></h5>
+                        <p><?php echo $row['descripcion']; ?></p>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
     </div>
     <div class="resto">
         <a href="/proyectodbdw/menus.php?menu=desayuno"><img src="./Assets/desayunos.jpg"></a>

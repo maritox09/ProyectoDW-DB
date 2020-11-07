@@ -7,6 +7,7 @@ $id = $_GET['id'];
 $row = mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM estadopedidos WHERE id_pedido = $id"));
 $user = mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM pedidos WHERE id_pedido = $id"))['id_usuario'];
 $data_user = mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM usuarios WHERE id_usuario = $user"));
+$coment = mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM pedidos WHERE id_pedido = $id"));
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +54,13 @@ $data_user = mysqli_fetch_assoc(mysqli_query($con,"SELECT * FROM usuarios WHERE 
                         }
                     ?>
                 </p>
+            </div>
+            <div class="col">
+                <form class="editar" action="/proyectodbdw/auxis/actualizarcomentario.php" method="post">
+                    <input type="hidden" name="id" value="<?php echo $id?>">
+                    <input class="comentario" type="text" name="comentario" value="<?php echo $coment['comentario']?>">
+                    <input type="submit" value="Actualizar comentario" class="ok">
+                </form>
             </div>
         </div>
     </div>

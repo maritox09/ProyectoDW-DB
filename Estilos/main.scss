@@ -75,7 +75,14 @@ body {
             border-width: 10px;
             border-color: $coloracento;
             margin-top: 3vh;
-            width: 50vw;
+            width: 40vw;
+        }
+        h5,
+        p {
+            color: $coloracento2;
+            background-color: $colorsecundario;
+            border-style: solid;
+            border-color: $coloracento;
         }
     }
     .resto {
@@ -163,6 +170,11 @@ body {
     h3 {
         margin: 0px;
     }
+}
+
+.comentario {
+    height: 5vh;
+    width: 20vw !important;
 }
 
 .platillo {
@@ -293,7 +305,6 @@ nav {
 table {
     margin: 1vw;
     align-items: center;
-    table-layout: fixed;
     width: 98%;
     thead {
         th,
