@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost/proyectodbdw/perfil.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mr. Taco</title>
+    <link rel="stylesheet" href="./perfil_files/main.css">
+    <link href="./perfil_files/css2" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="./perfil_files/logo.jpg" class="logo">
+        <a href="http://localhost/proyectodbdw/main.php">Inicio</a>
+        <a href="http://localhost/proyectodbdw/menus.php?menu=desayuno">Desayunos</a>
+        <a href="http://localhost/proyectodbdw/menus.php?menu=almuerzo">Almuerzos</a>
+        <a href="http://localhost/proyectodbdw/menus.php?menu=cena">Cenas</a>
+        <a href="http://localhost/proyectodbdw/destacados.php">Destacados</a>
+        <a href="http://localhost:3000/">Historia</a><a href="http://localhost/proyectodbdw/perfil.php">Perfil</a><a href="http://localhost/proyectodbdw/administrar.php">Administrar</a><a href="http://localhost/proyectodbdw/auxis/logout.php">Logout</a>    </header>
+        <div class="perfil">
+        <form class="user" action="http://localhost/proyectodbdw/auxis/actualizarperfil.php" method="post">
+            <h1>perfil</h1>
+            <input type="hidden" name="id" value="10">
+            Nombre: <input type="text" name="nombre" value="Mario" required="">
+            Apellido: <input type="text" name="apellido" value="Yon" required="">
+            Correo electronico: <input type="text" name="correo" value="jmyc9999@gmail.com" required="">
+            Direccion: <input type="text" name="direccion" value="Km 14.5 carretera a piedra parada" required="">
+            Telefono: <input type="text" name="telefono" value="31949828" required="">
+            No. de Tarjeta: <input type="text" name="tarjeta" value="222">
+            Fecha de vencimiento:<input type="month" name="vencimiento" value="2020-12">
+            <input type="submit" value="Actualizar Datos" class="ok">
+            <button form="contra" class="error">Cambiar contraseña</button>
+        </form>
+        <form id="contra" action="http://localhost/Proyectodbdw/auxis/cambiarpassword.php" method="post">
+            <input type="hidden" name="id" value="10">
+        </form>
+    </div>
+    <footer>
+        <a href="http://localhost/proyectodbdw/contacto.php">Contactanos</a>
+        <a href="http://localhost/proyectodbdw/FAQ.php">FAQ</a>
+        <img src="./perfil_files/logotenue.png">
+        <a href="http://localhost/proyectodbdw/perfil.php"></a>
+        <a href="http://localhost/proyectodbdw/auxis/revisapedido.php">Revisa tu pedido</a>    </footer>
+
+
+</body></html>

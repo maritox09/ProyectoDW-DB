@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://localhost/proyectodbdw/admin/auxis/editarplatillos.php?id=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./PlatillosEditar_files/main.css">
+    <link href="./PlatillosEditar_files/css2" rel="stylesheet">
+    <title>Editar Tacos al pastor</title>
+</head>
+<body>
+    <header>
+        <img src="./PlatillosEditar_files/logo.jpg" class="logo">
+    <a href="http://localhost/proyectodbdw/main.php">Inicio</a>
+    <a href="http://localhost/proyectodbdw/administrar.php">Regresar</a>
+    <a href="http://localhost/proyectodbdw/auxis/logout.php">Logout</a>    </header>
+        <div class="platillo"> 
+        <form action="http://localhost/proyectodbdw/admin/auxis/editplat.php" class="editar" method="post" enctype="multipart/form-data">
+            <h3>Datos del platillo</h3>
+            <input type="hidden" name="id" value="1">
+            Nombre: <input type="text" name="nombre" value="Tacos al pastor">
+            Descripcion: <input type="text" name="descripcion" value="Tortilla con carne al pastor acompañado con piña, perejil y cebolla">
+            Precio: <input type="text" name="precio" value="30">
+            Fotografia: <input type="file" name="foto" value="">
+            Disponible: <input type="checkbox" name="disponible" checked="">
+            Destacado: <input type="checkbox" name="destacado" checked="">
+            <input type="submit" value="Actualizar" class="ok">
+        </form>
+        <form action="http://localhost/proyectodbdw/admin/auxis/editplating.php" class="editar" method="post">
+            <div class="platillo">
+                <div class="editar">
+                    <h3>Ingredientes</h3>
+                    Ingrediente 1: <input list="ingredientes" name="ingrediente1" value="Carne al pastor">
+                    Ingrediente 2: <input list="ingredientes" name="ingrediente2" value="Tortilla">
+                    Ingrediente 3: <input list="ingredientes" name="ingrediente3" value="Perejil">
+                    Ingrediente 4: <input list="ingredientes" name="ingrediente4" value="Piña">
+                    Ingrediente 5: <input list="ingredientes" name="ingrediente5" value="cebolla">
+                    <datalist id="ingredientes">
+                        <option value=""></option><option value="Perejil"></option><option value="Carne"></option><option value="Piña"></option><option value="Tortilla"></option><option value="Carne al pastor"></option><option value="carne de cerdo "></option><option value="pollo"></option><option value="cebolla"></option><option value="Queso"></option><option value="Huevo"></option><option value="Jamon de cerdo"></option><option value="Jamon de pavo"></option><option value="Camaron"></option><option value="Calamar"></option><option value="Tomate"></option><option value="frijol">                    </option></datalist>
+                </div>
+                <div class="editar"> 
+                    <h3>Cantidades</h3>
+                    Ingrediente 1: <input list="number" name="cantidad1" value="3">
+                    Ingrediente 2: <input list="number" name="cantidad2" value="3">
+                    Ingrediente 3: <input list="number" name="cantidad3" value="6">
+                    Ingrediente 4: <input list="number" name="cantidad4" value="3">
+                    Ingrediente 5: <input list="number" name="cantidad5" value="6">
+                    <input type="hidden" name="id1" value="1">
+                    <input type="hidden" name="id2" value="2">
+                    <input type="hidden" name="id3" value="3">
+                    <input type="hidden" name="id4" value="4">
+                    <input type="hidden" name="id5" value="5">
+                </div>
+            </div>
+            <input type="submit" value="Actualizar" class="ok">
+        </form>
+    </div>
+    <footer>
+        <a href="http://localhost/proyectodbdw/contacto.php">Contactanos</a>
+        <a href="http://localhost/proyectodbdw/FAQ.php">FAQ</a>
+        <img src="./PlatillosEditar_files/logotenue.png">
+        <a href="http://localhost/proyectodbdw/admin/auxis/editarplatillos.php?id=1"></a>
+        <a href="http://localhost/proyectodbdw/auxis/revisapedido.php">Revisa tu pedido</a>    </footer>
+
+</body></html>

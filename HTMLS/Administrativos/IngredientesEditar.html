@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://localhost/proyectodbdw/admin/auxis/editaringrediente.php?id=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./IngredientesEditar_files/main.css">
+    <link href="./IngredientesEditar_files/css2" rel="stylesheet">
+    <title>Editar Perejil</title>
+</head>
+<body>
+<header>
+        <img src="./IngredientesEditar_files/logo.jpg" class="logo">
+        <a href="http://localhost/proyectodbdw/main.php">Inicio</a>
+        <a href="http://localhost/proyectodbdw/admin/ingredientes.php">Regresar</a>
+        <a href="http://localhost/proyectodbdw/auxis/logout.php">Logout</a>
+    </header>
+    <div class="editar">
+        <h3>Editar Perejil</h3>
+        <form method="post" action="http://localhost/proyectodbdw/admin/auxis/editing.php" class="editar">
+            ID: <input type="text" name="id" required="" value="1" readonly="">
+            Ingrediente: <input type="text" name="nombre" required="" value="Perejil">
+            Cantidad: <input type="text" name="cantidad" required="" value="88">
+            <input type="submit" value="Actualizar" class="ok">
+        </form>
+    </div>
+    <div class="editar">
+        <h3>Agregar/Restar Perejil</h3>
+        <form method="post" action="http://localhost/proyectodbdw/admin/auxis/agresing.php" class="editar">
+            <input type="hidden" name="id" required="" value="1" readonly="">
+            <input type="hidden" name="nombre" required="" value="Perejil">
+            Cantidad: <input type="text" name="cantidad" required="">
+            <input type="submit" value="Actualizar" class="ok">
+        </form>
+    </div>
+    <footer>
+        <a href="http://localhost/proyectodbdw/admin/auxis/editaringrediente.php?id=1">Contactanos</a>
+        <img src="./IngredientesEditar_files/logotenue.png">
+        <a href="http://localhost/proyectodbdw/admin/auxis/editaringrediente.php?id=1">Sucursales</a>
+    </footer>
+
+</body></html>

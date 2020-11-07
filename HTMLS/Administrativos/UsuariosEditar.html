@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://localhost/proyectodbdw/admin/auxis/editarusuario.php?id=10 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./UsuariosEditar_files/main.css">
+    <link href="./UsuariosEditar_files/css2" rel="stylesheet">
+    <title>Editar usuario</title>
+</head>
+<body>
+    <header>
+        <img src="./UsuariosEditar_files/logo.jpg" class="logo">
+    <a href="http://localhost/proyectodbdw/main.php">Inicio</a>
+    <a href="http://localhost/proyectodbdw/administrar.php">Regresar</a>
+    <a href="http://localhost/proyectodbdw/auxis/logout.php">Logout</a>    </header>
+        <div class="wrapper-platillos"> 
+        <form action="http://localhost/proyectodbdw/admin/auxis/editplat.php" class="editar" method="post" enctype="multipart/form-data">
+            <h3>Datos del usuario</h3>
+            <input type="hidden" name="id" value="10">
+            Nombre: <input type="text" name="nombre" value="Mario">
+            Apellido: <input type="text" name="apellido" value="Yon">
+            Correo: <input type="text" name="correo" value="jmyc9999@gmail.com">
+            Rol: <input list="roles" name="rol" placeholder="admin" required="">
+            <datalist id="roles">
+                <option>empleado</option>
+                <option>admin</option>
+                <option>visitante</option>
+            </datalist>
+            <input type="submit" value="Actualizar" class="ok">
+        </form>
+        <form class="editar" action="http://localhost/proyectodbdw/admin/auxis/resetpassword.php" method="post">
+            <input type="hidden" name="id" value="10">
+            <input type="submit" value="Resetear contraseña" class="error">
+        </form>
+    </div>
+    <footer>
+        <a href="http://localhost/proyectodbdw/contacto.php">Contactanos</a>
+        <a href="http://localhost/proyectodbdw/FAQ.php">FAQ</a>
+        <img src="./UsuariosEditar_files/logotenue.png">
+        <a href="http://localhost/proyectodbdw/admin/auxis/editarusuario.php?id=10"></a>
+        <a href="http://localhost/proyectodbdw/auxis/revisapedido.php">Revisa tu pedido</a>    </footer>
+
+</body></html>

@@ -15,7 +15,7 @@ require_once '/xampp/htdocs/Proyectodbdw/auxis/componentes.php';
     <header>
         <?php menuprincipal(); ?>
     </header>
-    <div class="wrapper-menus">
+    <div class="wrapper-platillos">
         <div class="row">
             <div class="col">
                 <h1>Contactanos</h1>

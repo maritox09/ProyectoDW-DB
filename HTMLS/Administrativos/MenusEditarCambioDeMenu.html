@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- saved from url=(0097)http://localhost/proyectodbdw/admin/auxis/cambiardemenu.php?id=6&nombre=Quesadillas%20al%20pastor -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de menu</title>
+    <link rel="stylesheet" href="./MenusEditarCambioDeMenu_files/main.css">
+    <link href="./MenusEditarCambioDeMenu_files/css2" rel="stylesheet">
+</head>
+<body>
+    <header> <img src="./MenusEditarCambioDeMenu_files/logo.jpg" class="logo">
+    <a href="http://localhost/proyectodbdw/main.php">Inicio</a>
+    <a href="http://localhost/proyectodbdw/auxis/logout.php">Logout</a> </header>
+        <div class="wrapper-platillos">
+        <form class="editar" action="http://localhost/proyectodbdw/admin/auxis/menucamaux.php" method="post">
+            <h1>Cambiar Quesadillas al pastor de menu</h1>
+            <input type="hidden" name="id" value="6">
+            Nombre: <input type="text" value="Quesadillas al pastor" required="" readonly="">
+            Menu: <input list="menus" name="tiempo" value="desayuno" required="">
+            <input type="submit" value="Cambiar">
+            <datalist id="menus">
+                <option value="desayuno">
+                </option><option value="almuerzo">
+                </option><option value="cena">
+            </option></datalist>
+        </form>
+    </div>
+    <footer> <a href="http://localhost/proyectodbdw/contacto.php">Contactanos</a>
+        <a href="http://localhost/proyectodbdw/FAQ.php">FAQ</a>
+        <img src="./MenusEditarCambioDeMenu_files/logotenue.png">
+        <a href="http://localhost/proyectodbdw/admin/auxis/cambiardemenu.php?id=6&amp;nombre=Quesadillas%20al%20pastor"></a>
+        <a href="http://localhost/proyectodbdw/auxis/revisapedido.php">Revisa tu pedido</a> </footer>
+
+</body></html>
